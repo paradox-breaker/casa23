@@ -3,12 +3,12 @@ project:
   output-dir: docs
 
 book:
-  title: "try23"
-  author: "Norah Jones"
+  title: "CASA0023 Weekly Diary"
+  author: "Lingqiao Yang"
   date: "2025/2/4"
   chapters:
     - index.qmd
-    - intro.qmd
+    - wk1.qmd
     - summary.qmd
     - references.qmd
 

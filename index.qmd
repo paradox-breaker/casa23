@@ -1,9 +1,3 @@
-# Preface {.unnumbered}
+# Welcome {.unnumbered}
 
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-```{r}
-1 + 1
-```
+This is my weekly study notes for the CASA0023 course. My undergraduate major was Geographic Information Science, and my thesis focused on vegetation extraction from remote sensing imagery. Therefore, some of my personal reflections may be related to my undergraduate background.
