@@ -1,7 +1,26 @@
 # Introduction
 
-This is a book created from markdown and executable code.
+## Summary
 
-```{r}
-1 + 1
-```
+Remote sensing is a science that uses electromagnetic radiation as a medium to identify surface features and apply surface information to relevant fields [@Ranganath2007]. Various sensors function like human eyes that can perceive a broader range of spectral bands, providing richer and more extensive ground information, thus laying the foundation for further analysis.
+
+### Active and Passive Remote Sensing
+
+@fig-comparison and @tbl-comparison demonstate the differences between active and passive remote sensing in terms of working principles, advantages and applications.
+
+![Principle Differences Between Active and Passive Remote Sensing](https://analytik.co.uk/wp-content/uploads/2019/01/active-vs-passive-remote-sensing.png){#fig-comparison}
+
++---------------+--------------------------------------------------------------------------+-------------------------------------------------------------+
+| Category      | Active Remote Sensing                                                    | Passive Remote Sensing                                      |
++===============+==========================================================================+=============================================================+
+| Energy Source | Sensor-generated energy                                                  | Relies on surface radiation                                 |
++---------------+--------------------------------------------------------------------------+-------------------------------------------------------------+
+| Advantages    | -   Independent of surface radiation, unaffected by lighting conditions. | -   Can cover large areas simultaneously.                   |
+|               |                                                                          |                                                             |
+|               | -   Can penetrate clouds, vegetation, etc.                               | -   High revisit rate,capable of providing time-series data |
++---------------+--------------------------------------------------------------------------+-------------------------------------------------------------+
+| Applications  | Suitable for all-time, all-weather, and extreme                          | Suitable for large-scale continuous observation             |
+|               | environment measurements                                                 |                                                             |
++---------------+--------------------------------------------------------------------------+-------------------------------------------------------------+
+
+: Comparison of Active and Passive Remote Sensing {#tbl-comparison}

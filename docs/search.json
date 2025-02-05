@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CASA0023 Weekly Diary",
     "section": "",
-    "text": "Welcome\nThis is my weekly study notes for the CASA0023 course. My undergraduate major was Geographic Information Science, and my thesis focused on vegetation extraction from remote sensing imagery. Therefore, some of my personal reflections may be related to my undergraduate background.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "Welcome\nThis is my weekly study notes for the CASA0023 course. My undergraduate major was Geographic Information Science, and my thesis focused on vegetation extraction from remote sensing imagery. Therefore, some of my personal reflections may be related to my undergraduate background.\n\n\n\n\nNavalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. “Remote Sensing Applications: An Overview.” Current Science 93 (12): 1747–66. http://www.jstor.org/stable/24102069.",
     "crumbs": [
       "Welcome"
     ]
@@ -14,7 +14,17 @@
     "href": "wk1.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "1.1 Summary\nRemote sensing is a science that uses electromagnetic radiation as a medium to identify surface features and apply surface information to relevant fields (Navalgund, Jayaraman, and Roy 2007). Various sensors function like human eyes that can perceive a broader range of spectral bands, providing richer and more extensive ground information, thus laying the foundation for further analysis.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "wk1.html#summary",
+    "href": "wk1.html#summary",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "1.1.1 Active and Passive Remote Sensing\nFigure 1.1 and Table 1.1 demonstate the differences between active and passive remote sensing in terms of working principles, advantages and applications.\n\n\n\n\n\n\nFigure 1.1: Principle Differences Between Active and Passive Remote Sensing\n\n\n\n\n\n\nTable 1.1: Comparison of Active and Passive Remote Sensing\n\n\n\n\n\n\n\n\n\n\nCategory\nActive Remote Sensing\nPassive Remote Sensing\n\n\n\n\nEnergy Source\nSensor-generated energy\nRelies on surface radiation\n\n\nAdvantages\n\nIndependent of surface radiation, unaffected by lighting conditions.\nCan penetrate clouds, vegetation, etc.\n\n\nCan cover large areas simultaneously.\nHigh revisit rate,capable of providing time-series data\n\n\n\nApplications\nSuitable for all-time, all-weather, and extreme environment measurements\nSuitable for large-scale continuous observation\n\n\n\n\n\n\n\n\n\n\nNavalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. “Remote Sensing Applications: An Overview.” Current Science 93 (12): 1747–66. http://www.jstor.org/stable/24102069.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -24,7 +34,7 @@
     "href": "summary.html",
     "title": "2  Summary",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nNavalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. “Remote Sensing Applications: An Overview.” Current Science 93 (12): 1747–66. http://www.jstor.org/stable/24102069.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
     ]
@@ -34,7 +44,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "Navalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007.\n“Remote Sensing Applications: An Overview.” Current\nScience 93 (12): 1747–66. http://www.jstor.org/stable/24102069.",
     "crumbs": [
       "References"
     ]
