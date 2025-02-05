@@ -163,6 +163,8 @@ div.csl-indent {
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a>
   <ul class="collapse">
   <li><a href="#active-and-passive-remote-sensing" id="toc-active-and-passive-remote-sensing" class="nav-link" data-scroll-target="#active-and-passive-remote-sensing"><span class="header-section-number">1.1.1</span> Active and Passive Remote Sensing</a></li>
+  <li><a href="#interaction-with-earths-surface" id="toc-interaction-with-earths-surface" class="nav-link" data-scroll-target="#interaction-with-earths-surface"><span class="header-section-number">1.1.2</span> Interaction with Earth’s Surface</a></li>
+  <li><a href="#four-types-of-resolution" id="toc-four-types-of-resolution" class="nav-link" data-scroll-target="#four-types-of-resolution"><span class="header-section-number">1.1.3</span> Four Types of Resolution</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -251,6 +253,55 @@ Table&nbsp;1.1: Comparison of Active and Passive Remote Sensing
 </div>
 </figure>
 </div>
+</section>
+<section id="interaction-with-earths-surface" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="interaction-with-earths-surface"><span class="header-section-number">1.1.2</span> Interaction with Earth’s Surface</h3>
+<p>As <a href="#fig-interaction" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> shows, solar radiation undergoes a series of interactions at the Earth’s surface, such as cloud scattering, surface scattering, and atmospheric absorption. The energy ultimately received by the sensor is the result of these combined processes, representing rich information while also potentially introducing interference to the research. For example, atmospheric correction is required in the preprocessing of remote sensing images because the energy received by the sensor is affected by atmospheric scattering and absorption, leading to reduced image contrast.</p>
+<div id="fig-interaction" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="image/interaction.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: Interaction with Earth’s Surface
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="four-types-of-resolution" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="four-types-of-resolution"><span class="header-section-number">1.1.3</span> Four Types of Resolution</h3>
+<p>Typically, the design of remote sensing sensors requires a trade-off between these four types of resolution based on their primary application areas. For example, high spatial resolution often comes at the cost of a smaller coverage area, which results in a longer revisit period, meaning lower temporal resolution. Additionally, due to technical constraints such as data transmission, spatial resolution and spectral resolution cannot be simultaneously maximized.</p>
+<table class="caption-top table">
+<caption>Definitions of the Four Types of Resolution in Remote Sensing</caption>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Resolution Type</th>
+<th>&nbsp;Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spatial Resolution</td>
+<td>The smallest ground unit distinguishable by the sensor, which corresponds to the size of a raster pixel.</td>
+</tr>
+<tr class="even">
+<td>Spectral Resolution</td>
+<td>The number and width of spectral bands that the sensor can detect.</td>
+</tr>
+<tr class="odd">
+<td>Temporal Resolution</td>
+<td>The revisit cycle of the sensor.</td>
+</tr>
+<tr class="even">
+<td>Radiometric Resolution</td>
+<td>The smallest detectable energy variation by the sensor.</td>
+</tr>
+</tbody>
+</table>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
