@@ -48,3 +48,15 @@ Typically, the design of remote sensing sensors requires a trade-off between the
 +------------------------+----------------------------------------------------------------------------------------------------------+
 
 : Definitions of the Four Types of Resolution in Remote Sensing
+
+## Application
+
+Remote sensing has been widely studied in various fields, including agricultural management, environmental monitoring, geological exploration, climate change research, land planning, and disaster emergency response. The applicability of active and passive remote sensing varies across different research areas. For example, in terrain mapping, passive remote sensing lacks strong penetration capability, making it difficult to acquire exposed terrain information. In contrast, active remote sensing techniques such as LiDAR and SAR can penetrate surface cover and directly measure elevation. Similarly, in vegetation analysis, the spectral characteristics of vegetation align well with solar radiation, allowing passive remote sensing to provide rich spectral information. This makes it easier to calculate vegetation indices and efficiently monitor vegetation changes.
+
+In addition, different fields have varying requirements for image resolution. For instance, urban planning requires high spatial resolution to identify fine structures such as roads and buildings. Weather monitoring demands frequent data updates to capture rapidly changing atmospheric conditions. Vegetation analysis relies on abundant spectral information to detect subtle variations in vegetation health. Temperature monitoring requires sensors with high radiometric resolution to capture small temperature differences accurately.
+
+Taking the application of remote sensing in agriculture as an example, the technology primarily utilized in this field is passive remote sensing, which aims to obtain information about plant growth and health conditions. Remote sensing in agriculture can be categorized into several aspects, including crop identification, growth monitoring, yield estimation, pest and disease control, and irrigation management, all of which help optimize agricultural operations and enhance production efficiency.
+
+The advancement of remote sensing technology, particularly improvements in satellite image resolution, has significantly contributed to the development of precision agriculture. For instance, high spatial resolution data provides more detailed ground information, aiding in land cover identification and soil condition monitoring. Meanwhile, hyperspectral imagery captures finer spectral details, such as the quantification of solar-induced chlorophyll fluorescence, which helps estimate photosynthetic activity, reflecting crop nutritional status and stress response capabilities [@sishodia2020].
+
+## Reflection
