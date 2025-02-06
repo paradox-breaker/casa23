@@ -39,8 +39,7 @@ Typically, the design of remote sensing sensors requires a trade-off between the
 +========================+==========================================================================================================+
 | Spatial Resolution     | The smallest ground unit distinguishable by the sensor, which corresponds to the size of a raster pixel. |
 +------------------------+----------------------------------------------------------------------------------------------------------+
-| Spectral Resolution    | The number and width of spectral bands that the                                                          |
-|                        | sensor can detect.                                                                                       |
+| Spectral Resolution    | The number and width of spectral bands that the sensor can detect.                                       |
 +------------------------+----------------------------------------------------------------------------------------------------------+
 | Temporal Resolution    | The revisit cycle of the sensor.                                                                         |
 +------------------------+----------------------------------------------------------------------------------------------------------+
@@ -60,3 +59,15 @@ Taking the application of remote sensing in agriculture as an example, the techn
 The advancement of remote sensing technology, particularly improvements in satellite image resolution, has significantly contributed to the development of precision agriculture. For instance, high spatial resolution data provides more detailed ground information, aiding in land cover identification and soil condition monitoring. Meanwhile, hyperspectral imagery captures finer spectral details, such as the quantification of solar-induced chlorophyll fluorescence, which helps estimate photosynthetic activity, reflecting crop nutritional status and stress response capabilities [@sishodia2020].
 
 ## Reflection
+
+### Understanding Remote Sensing Sensors
+
+I find it fascinating to compare the information received by the human eye with that received by remote sensing sensors. Despite experiencing the same Rayleigh scattering, observers at different locations may see different sky colors due to variations in the atmospheric path length of sunlight. Similarly, remote sensing satellites are highly susceptible to atmospheric effects, highlighting the importance of atmospheric correction. However, unlike the three types of cone cells in the human eye that perceive color and detail, remote sensing sensors are not limited to three spectral bands. For instance, the combination of the near-infrared and red bands can effectively distinguish vegetation, presenting a standard false-color representation that differs from true-color imagery.
+
+### Methods for Balancing the Four Resolutions
+
+As mentioned earlier, it is challenging to simultaneously optimize all four types of resolution in a single task. Therefore, in practical applications, multi-source data fusion is often required. For example, to balance spatial and spectral resolution, high-spectral but low-spatial-resolution imagery can be fused with high-spatial-resolution imagery. Additionally, temporal interpolation can be used to integrate high-temporal, low-spatial-resolution data (e.g., MODIS) with low-temporal, high-spatial-resolution data (e.g., Sentinel-2) to generate imagery that balances both temporal and spatial resolution.
+
+### Future Prospects of Remote Sensing Technology
+
+At present, remote sensing technology is evolving toward higher resolution, greater intelligence, and improved efficiency. Enhancing sensor performance while integrating artificial intelligence can significantly improve data processing efficiency and automation. Taking land cover classification as an example, the introduction of machine learning has enhanced classification accuracy and stability. In the future, the development of adaptive classification methods that reduce the need for manual labeling could further enhance the automation and efficiency of remote sensing classification.
