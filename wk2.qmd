@@ -4,5 +4,7 @@ These are the introduction slides for the MSI sensor onboard the Sentinel-2 sate
 
 ```{r echo = FALSE}
 xaringanExtra::embed_xaringan(url = "https://paradox-breaker.github.io/presentation/pre.html",
-                              ratio = "16:9")
+                              ratio = "13:9")
 ```
+
+[Link](https://paradox-breaker.github.io/presentation/pre.html){.uri}
