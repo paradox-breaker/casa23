@@ -1,0 +1,8 @@
+# Presentation
+
+These are the introduction slides for the MSI sensor onboard the Sentinel-2 satellite series.
+
+```{r echo = FALSE}
+xaringanExtra::embed_xaringan(url = "https://paradox-breaker.github.io/presentation/pre.html",
+                              ratio = "16:9")
+```

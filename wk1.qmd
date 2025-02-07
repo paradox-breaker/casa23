@@ -34,17 +34,12 @@ As @fig-interaction shows, solar radiation undergoes a series of interactions at
 
 Typically, the design of remote sensing sensors requires a trade-off between these four types of resolution based on their primary application areas. For example, high spatial resolution often comes at the cost of a smaller coverage area, which results in a longer revisit period, meaning lower temporal resolution. Additionally, due to technical constraints such as data transmission, spatial resolution and spectral resolution cannot be simultaneously maximized.
 
-+------------------------+----------------------------------------------------------------------------------------------------------+
 | Resolution Type        |  Definition                                                                                              |
-+========================+==========================================================================================================+
+|------------------------|----------------------------------------------------------------------------------------------------------|
 | Spatial Resolution     | The smallest ground unit distinguishable by the sensor, which corresponds to the size of a raster pixel. |
-+------------------------+----------------------------------------------------------------------------------------------------------+
 | Spectral Resolution    | The number and width of spectral bands that the sensor can detect.                                       |
-+------------------------+----------------------------------------------------------------------------------------------------------+
 | Temporal Resolution    | The revisit cycle of the sensor.                                                                         |
-+------------------------+----------------------------------------------------------------------------------------------------------+
 | Radiometric Resolution | The smallest detectable energy variation by the sensor.                                                  |
-+------------------------+----------------------------------------------------------------------------------------------------------+
 
 : Definitions of the Four Types of Resolution in Remote Sensing
 

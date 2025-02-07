@@ -9,17 +9,17 @@ book:
   chapters:
     - index.qmd
     - wk1.qmd
-    - summary.qmd
+    - wk2.qmd
     - references.qmd
 
 bibliography: references.bib
 nocite: "@*"
 
+
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
+  
 
 editor: visual
 
