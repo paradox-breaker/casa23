@@ -1,0 +1,84 @@
+# Data Correction and Enhancement
+
+## Summary
+
+### Data Organization
+
+#### Format Conversion
+
+If specific software is required for image analysis, it is necessary to select a format compatible with that software.
+
+#### Image Mosaicking
+
+Since single images usually cover limited areas, and sometimes a study area spans across two adjacent scenes, it is necessary to mosaic two images.
+
+![](image/mosaic_code.png){fig-align="left" width="309" height="20"}
+
+~fun="mean"\ means\ calculating\ the\ average\ value\ in\ overlapping\ areas.~
+
+This section selects an area near the city of Huzhou, China. The final true-color image after mosaicking has a smooth transition without noticeable seams.
+
+![](image/mosaic.png){fig-align="center" width="509"}
+
+Sometimes, when the pixel values in the overlapping areas of two images differ significantly, the seam may become prominent. In such cases, feathering techniques need to be applied.
+
+#### Image Clipping
+
+Since the coverage of remote sensing images is large, processing and analyzing the entire image may result in unnecessarily computation. Therefore, image clipping is necessary.
+
+For example, if I want to classify land cover in Anji County, I can use the boundary vector data to clip the image.
+
+![Landsat 9 True-Color Remote Sensing Image of Anji County](image/anji.png){width="448"}
+
+I can also determine a threshold based on NDVI values to extract vegetation.
+
+![](image/NDVI1.png){fig-align="left" width="363" height="42"}
+
+![](image/NDVI2.png)
+
+### Data Correction
+
+#### Radiometric Calibration
+
+Since the sensor receives digital signals, it is necessary to convert them to radiometric units with physical significance, such as radiance. The gain and bias can be obtained from the sensor metadata.
+
+![](image/radiometric.png){width="230" height="43"}
+
+#### Geometric Correction
+
+Geometric correction mainly consists of two parts:
+
+-   Establishing a mapping relationship between the image to be corrected and the reference image based on selected control points.
+
+-   Resampling the image.
+
+The choice of resampling method depends on the specific application. For example, nearest neighbor resampling is suitable for classification tasks, while cubic interpolation is more appropriate for image analysis.
+
+#### Atmospheric Correction
+
+Atmospheric correction is the process of removing atmospheric effects to restore surface reflectance. The necessity of atmospheric correction depends on the specific application. For example:
+
+-   Land cover classification does not necessarily require atmospheric correction.
+
+-   Quantitative parameter extraction requires it for accurate results.
+
++----------------------+-----------------------------------------------+------------------------------------------+
+|                      | Absolute Calibration                          | Relative Calibration                     |
++======================+===============================================+==========================================+
+| Objective            | Convert digital brightness values into scaled | Normalize radiometric intensities across |
+|                      | surface reflectance.                          | different images and bands.              |
++----------------------+-----------------------------------------------+------------------------------------------+
+| Methods              | -   Atmospheric transfer models               | -   Dark Object Subtraction              |
+|                      |                                               |                                          |
+|                      | -   Empirical Line Calibration                | -   Histogram Adjustment                 |
+|                      |                                               |                                          |
+|                      |                                               | -   Pseudoinvariant Features             |
++----------------------+-----------------------------------------------+------------------------------------------+
+| Typical Applications | Typical Applications                          | Time-series analysis.                    |
++----------------------+-----------------------------------------------+------------------------------------------+
+
+: Absolute Calibration VS Relative Calibration
+
+### Image Enhancement
+
+Image enhancement refers to the process of improving image quality and highlighting key information using processing techniques. It can be used for smoothing and denoising, edge detection, and contrast enhancement, making images more suitable for observation and analysis.
