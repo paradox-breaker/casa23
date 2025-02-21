@@ -14,7 +14,7 @@ Since single images usually cover limited areas, and sometimes a study area span
 
 ![](image/mosaic_code.png){fig-align="left" width="309" height="20"}
 
-~fun="mean"\ means\ calculating\ the\ average\ value\ in\ overlapping\ areas.~
+~fun="mean" means calculating the average value in overlapping areas.~
 
 This section selects an area near the city of Huzhou, China. The final true-color image after mosaicking has a smooth transition without noticeable seams.
 
@@ -28,13 +28,13 @@ Since the coverage of remote sensing images is large, processing and analyzing t
 
 For example, if I want to classify land cover in Anji County, I can use the boundary vector data to clip the image.
 
-![Landsat 9 True-Color Remote Sensing Image of Anji County](image/anji.png){width="448"}
+![Landsat 9 True-Color Remote Sensing Image of Anji County](image/anji.png){fig-align="left" width="448"}
 
 I can also determine a threshold based on NDVI values to extract vegetation.
 
 ![](image/NDVI1.png){fig-align="left" width="363" height="42"}
 
-![](image/NDVI2.png)
+![](image/NDVI2.png){fig-align="left"}
 
 ### Data Correction
 
@@ -62,23 +62,71 @@ Atmospheric correction is the process of removing atmospheric effects to restore
 
 -   Quantitative parameter extraction requires it for accurate results.
 
-+----------------------+-----------------------------------------------+------------------------------------------+
-|                      | Absolute Calibration                          | Relative Calibration                     |
-+======================+===============================================+==========================================+
-| Objective            | Convert digital brightness values into scaled | Normalize radiometric intensities across |
-|                      | surface reflectance.                          | different images and bands.              |
-+----------------------+-----------------------------------------------+------------------------------------------+
-| Methods              | -   Atmospheric transfer models               | -   Dark Object Subtraction              |
-|                      |                                               |                                          |
-|                      | -   Empirical Line Calibration                | -   Histogram Adjustment                 |
-|                      |                                               |                                          |
-|                      |                                               | -   Pseudoinvariant Features             |
-+----------------------+-----------------------------------------------+------------------------------------------+
-| Typical Applications | Typical Applications                          | Time-series analysis.                    |
-+----------------------+-----------------------------------------------+------------------------------------------+
++----------------------+--------------------------------------------------------------------+----------------------------------------------------------------------+
+|                      | Absolute Calibration                                               | Relative Calibration                                                 |
++======================+====================================================================+======================================================================+
+| Objective            | Convert digital brightness values into scaled surface reflectance. | Normalize radiometric intensities across different images and bands. |
++----------------------+--------------------------------------------------------------------+----------------------------------------------------------------------+
+| Methods              | -   Atmospheric transfer models                                    | -   Dark Object Subtraction                                          |
+|                      |                                                                    |                                                                      |
+|                      | -   Empirical Line Calibration                                     | -   Histogram Adjustment                                             |
+|                      |                                                                    |                                                                      |
+|                      |                                                                    | -   Pseudoinvariant Features                                         |
++----------------------+--------------------------------------------------------------------+----------------------------------------------------------------------+
+| Typical Applications | Typical Applications                                               | Time-series analysis.                                                |
++----------------------+--------------------------------------------------------------------+----------------------------------------------------------------------+
 
 : Absolute Calibration VS Relative Calibration
 
 ### Image Enhancement
 
 Image enhancement refers to the process of improving image quality and highlighting key information using processing techniques. It can be used for smoothing and denoising, edge detection, and contrast enhancement, making images more suitable for observation and analysis.
+
+## Application
+
+Radiometric calibration, geometric correction and atmospheric correction fall within the scope of remote sensing data preprocessing. The flowchart below intuitively illustrates the position of these three steps in practical remote sensing data applications.
+
+```{r echo = FALSE warning=FALSE}
+library(ggplot2)
+
+# 定义节点数据
+nodes <- data.frame(
+  label = c("Surface Reflection or Radiation", " Atmospheric Transmission ", "Photoelectric Conversion", "A/D Conversion", " Information Encoding", " Digital Transmission","Ground Decoding","Radiometric Correction","Geometric Correction","Atmospheric Correction","Remote Sensing Model Inversion","Derived Parameters"),
+  x = c(0, 2, 4, 4, 2, 0, 0,2,4,4,2,0), 
+  y = c(0, 0, 0, -0.2, -0.2, -0.2,-0.4,-0.4,-0.4,-0.6,-0.6,-0.6)
+)
+
+edges <- data.frame(
+  x = c(0, 2, 4, 4, 2, 0 ,0,2,4,4,2,0),
+  y = c(0, 0, 0, -0.2, -0.2, -0.2,-0.4,-0.4,-0.4,-0.6,-0.6,-0.6),  
+  xend = c(2, 4, 4, 2, 0, 0,2,4,4,2,0,0),
+  yend = c(0, 0, -0.2, -0.2, -0.2,-0.4,-0.4,-0.4,-0.6,-0.6,-0.6,-0.6)  
+)
+
+ggplot() +
+
+  geom_segment(data = edges, aes(x = x, y = y, xend = xend, yend = yend), 
+               arrow = arrow(length = unit(0.02, "cm")), size = 0.5) +  
+
+  geom_tile(data = nodes, aes(x = x, y = y), width = 1.8, height = 0.1, fill = "lightblue", color = "black") +
+  
+  geom_text(data = nodes, aes(x = x, y = y), label = nodes$label, size = 2.7) +
+ 
+  theme_void() 
+```
+
+Currently, many fields that use remote sensing data rely on Level-2 (L2) data because it has already undergone basic radiometric calibration and atmospheric correction, making it ready for direct analysis. For example, in multi-temporal analyses such as land use change and vegetation cover monitoring, standardized Level-2 data eliminates atmospheric interference, enhancing comparability and reducing the need for user preprocessing.
+
+Of course, not all research requires preprocessed data. For instance, some studies focus on atmospheric analysis or the development and testing of new correction algorithms, in which case more raw data would be more suitable.
+
+Compared to image correction, the application of image enhancement is relatively more concentrated, primarily focusing on visual enhancement and improving readability. For example, when using ENVI software for land cover classification, if the acquired image has a narrow spectral range that affects manual interpretation, stretching is needed to facilitate land cover recognition and build a reasonable training set. It is important to note that image stretching is mainly used to enhance details and typically does not alter the original pixel values. However, if the enhanced image is to be applied in further analysis, more caution is required, as the enhancement method should improve image contrast and edge information while preserving the original reflectance values [@Kaplan21].
+
+@Ramzan2025 fused Landsat 8 and Landsat 9 imagery to enhance the accuracy of crop classification and applied image enhancement after fusion to emphasize texture variations and spectral differences. Clearly, this step is crucial for precise classification, as it highlights key features and improves subsequent classification accuracy.
+
+## Reflection
+
+### Real-time Processing
+
+Some application areas, such as emergency response in natural disasters, have high real-time requirements. It is crucial to rapidly acquire and analyze image data of affected areas to improve response efficiency. The widespread adoption of UAVs provides a continuous data input source for real-time processing.
+
+Currently, research has demonstrated the feasibility of implementing edge computing on UAVs to directly perform classification tasks, enabling real-time data monitoring. This approach is also applicable to real-time image correction and enhancement, facilitating the efficient execution of subsequent tasks [@Daniel2022]. However, this field still faces challenges related to cost and computational overhead. Therefore, further research is needed to optimize algorithms and improve model accuracy.

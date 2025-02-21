@@ -172,6 +172,7 @@ div.csl-indent {
   <li><a href="#data-correction" id="toc-data-correction" class="nav-link" data-scroll-target="#data-correction"><span class="header-section-number">3.1.2</span> Data Correction</a></li>
   <li><a href="#image-enhancement" id="toc-image-enhancement" class="nav-link" data-scroll-target="#image-enhancement"><span class="header-section-number">3.1.3</span> Image Enhancement</a></li>
   </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">3.2</span> Application</a></li>
   </ul>
 </nav>
     </div>
@@ -226,7 +227,7 @@ div.csl-indent {
 <h4 data-number="3.1.1.3" class="anchored" data-anchor-id="image-clipping"><span class="header-section-number">3.1.1.3</span> Image Clipping</h4>
 <p>Since the coverage of remote sensing images is large, processing and analyzing the entire image may result in unnecessarily computation. Therefore, image clipping is necessary.</p>
 <p>For example, if I want to classify land cover in Anji County, I can use the boundary vector data to clip the image.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="image/anji.png" class="img-fluid figure-img" width="448"></p>
 <figcaption>Landsat 9 True-Color Remote Sensing Image of Anji County</figcaption>
@@ -238,7 +239,11 @@ div.csl-indent {
 <p><img src="image/NDVI1.png" class="quarto-figure quarto-figure-left figure-img" width="363" height="42"></p>
 </figure>
 </div>
-<p><img src="image/NDVI2.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="image/NDVI2.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
 </section>
 </section>
 <section id="data-correction" class="level3" data-number="3.1.2">
@@ -267,9 +272,9 @@ div.csl-indent {
 <table class="caption-top table">
 <caption>Absolute Calibration VS Relative Calibration</caption>
 <colgroup>
-<col style="width: 20%">
-<col style="width: 41%">
-<col style="width: 37%">
+<col style="width: 14%">
+<col style="width: 42%">
+<col style="width: 43%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -308,17 +313,45 @@ div.csl-indent {
 <section id="image-enhancement" class="level3" data-number="3.1.3">
 <h3 data-number="3.1.3" class="anchored" data-anchor-id="image-enhancement"><span class="header-section-number">3.1.3</span> Image Enhancement</h3>
 <p>Image enhancement refers to the process of improving image quality and highlighting key information using processing techniques. It can be used for smoothing and denoising, edge detection, and contrast enhancement, making images more suitable for observation and analysis.</p>
+</section>
+</section>
+<section id="application" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
+<p>Radiometric calibration, geometric correction, and atmospheric correction fall within the scope of remote sensing data preprocessing. The flowchart below intuitively illustrates the position of these three steps in practical remote sensing data applications.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="wk3_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Currently, many fields that use remote sensing data rely on Level-2 (L2) data because it has already undergone basic radiometric calibration and atmospheric correction, making it ready for direct analysis. For example, in multi-temporal analyses such as land use change and vegetation cover monitoring, standardized Level-2 data eliminates atmospheric interference, enhancing comparability and reducing the need for user preprocessing.</p>
+<p>Of course, not all research requires preprocessed data. For instance, some studies focus on atmospheric analysis or the development and testing of new correction algorithms, in which case more raw data would be more suitable.</p>
+<p>Compared to image correction, the application of image enhancement is relatively more concentrated, primarily focusing on visual enhancement and improving readability. For example, when using ENVI software for land cover classification, if the acquired image has a narrow spectral range that affects manual interpretation, stretching is needed to facilitate land cover recognition and build a reasonable training set. It is important to note that image stretching is mainly used to enhance details and typically does not alter the original pixel values. However, if the enhanced image is to be applied in further analysis, more caution is required, as the enhancement method should improve image contrast and edge information while preserving the original reflectance values <span class="citation" data-cites="Kaplan21">(<a href="references.html#ref-Kaplan21" role="doc-biblioref">Kaplan, Erer, and Kumlu 2021</a>)</span>.</p>
+<p><span class="citation" data-cites="Ramzan2025">Ramzan et al. (<a href="references.html#ref-Ramzan2025" role="doc-biblioref">2025</a>)</span> fused Landsat 8 and Landsat 9 imagery to enhance the accuracy of crop classification and applied image enhancement after fusion to emphasize texture variations and spectral differences. Clearly, this step is crucial for precise classification, as it highlights key features and improves subsequent classification accuracy.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Astola2019" class="csl-entry" role="listitem">
 Astola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma Kilpi. 2019. <span>“Comparison of Sentinel-2 and Landsat 8 Imagery for Forest Variable Prediction in Boreal Region.”</span> <em>Remote Sensing of Environment</em> 223: 257–73. https://doi.org/<a href="https://doi.org/10.1016/j.rse.2019.01.019">https://doi.org/10.1016/j.rse.2019.01.019</a>.
 </div>
+<div id="ref-Kaplan21" class="csl-entry" role="listitem">
+Kaplan, Nur Huseyin, Isin Erer, and Deniz Kumlu. 2021. <span>“Image Enhancement Methods for Remote Sensing: A Survey.”</span> In <em>Recent Remote Sensing Sensor Applications</em>, edited by Maged Marghany. Rijeka: IntechOpen. <a href="https://doi.org/10.5772/intechopen.98527">https://doi.org/10.5772/intechopen.98527</a>.
+</div>
 <div id="ref-Mohammadpour2022" class="csl-entry" role="listitem">
 Mohammadpour, Pegah, Domingos Xavier Viegas, and Carlos Viegas. 2022. <span>“Vegetation Mapping with Random Forest Using Sentinel 2 and GLCM Texture Feature—a Case Study for Lousã Region, Portugal.”</span> <em>Remote Sensing</em> 14 (18). <a href="https://doi.org/10.3390/rs14184585">https://doi.org/10.3390/rs14184585</a>.
 </div>
 <div id="ref-Ranganath2007" class="csl-entry" role="listitem">
 Navalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. <span>“Remote Sensing Applications: An Overview.”</span> <em>Current Science</em> 93 (12): 1747–66. <a href="http://www.jstor.org/stable/24102069">http://www.jstor.org/stable/24102069</a>.
+</div>
+<div id="ref-Ramzan2025" class="csl-entry" role="listitem">
+Ramzan, Zeeshan, Nisar Ahmed, Qurat-ul-Ain Akram, Shahzad Asif, and Muhammad Shahbaz. 2025. <span>“Enhancing Crop Classification Through Remote Sensing: Landsat 8-9 Fusion and Feature Selection.”</span> <em>Research Square</em> Preprint (Version 1). <a href="https://doi.org/10.21203/rs.3.rs-5710241/v1">https://doi.org/10.21203/rs.3.rs-5710241/v1</a>.
 </div>
 <div id="ref-sishodia2020" class="csl-entry" role="listitem">
 Sishodia, R. P., R. L. Ray, and S. K. Singh. 2020. <span>“Applications of Remote Sensing in Precision Agriculture: A Review.”</span> <em>Remote Sensing</em> 12: 3136. <a href="https://doi.org/10.3390/rs12193136">https://doi.org/10.3390/rs12193136</a>.
@@ -327,7 +360,6 @@ Sishodia, R. P., R. L. Ray, and S. K. Singh. 2020. <span>“Applications of Remo
 Spoto, Francois, Omar Sy, Paolo Laberinti, Philippe Martimort, Valerie Fernandez, Olivier Colin, Bianca Hoersch, and Aime Meygret. 2012. <span>“Overview of Sentinel-2.”</span> In <em>2012 IEEE International Geoscience and Remote Sensing Symposium</em>, 1707–10. <a href="https://doi.org/10.1109/IGARSS.2012.6351195">https://doi.org/10.1109/IGARSS.2012.6351195</a>.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
