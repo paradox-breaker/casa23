@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Presentation – CASA0023 Weekly Diary</title>
+<title>3&nbsp; Data Correction and Enhancement – CASA0023 Weekly Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./wk3.html" rel="next">
-<link href="./wk1.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./wk2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -88,8 +88,6 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/fitvids-2.1.1/fitvids.min.js"></script>
-
 
 
 </head>
@@ -103,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Presentation</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Correction and Enhancement</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -142,13 +140,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./wk2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Presentation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk3.html" class="sidebar-item-text sidebar-link">
+  <a href="./wk3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Correction and Enhancement</span></span></a>
   </div>
 </li>
@@ -163,15 +161,31 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#data-organization" id="toc-data-organization" class="nav-link" data-scroll-target="#data-organization"><span class="header-section-number">3.1.1</span> Data Organization</a></li>
+  <li><a href="#data-correction" id="toc-data-correction" class="nav-link" data-scroll-target="#data-correction"><span class="header-section-number">3.1.2</span> Data Correction</a></li>
+  <li><a href="#image-enhancement" id="toc-image-enhancement" class="nav-link" data-scroll-target="#image-enhancement"><span class="header-section-number">3.1.3</span> Image Enhancement</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">3.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a>
+  <ul class="collapse">
+  <li><a href="#real-time-processing" id="toc-real-time-processing" class="nav-link" data-scroll-target="#real-time-processing"><span class="header-section-number">3.3.1</span> Real-time Processing</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Presentation</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Correction and Enhancement</span></h1>
 </div>
 
 
@@ -188,16 +202,146 @@ div.csl-indent {
 </header>
 
 
-<p>These are the introduction slides for the MSI sensor onboard the Sentinel-2 satellite series.</p>
+<section id="summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<section id="data-organization" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="data-organization"><span class="header-section-number">3.1.1</span> Data Organization</h3>
+<section id="format-conversion" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="format-conversion"><span class="header-section-number">3.1.1.1</span> Format Conversion</h4>
+<p>If specific software is required for image analysis, it is necessary to select a format compatible with that software.</p>
+</section>
+<section id="image-mosaicking" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="image-mosaicking"><span class="header-section-number">3.1.1.2</span> Image Mosaicking</h4>
+<p>Since single images usually cover limited areas, and sometimes a study area spans across two adjacent scenes, it is necessary to mosaic two images.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="image/mosaic_code.png" class="quarto-figure quarto-figure-left figure-img" width="309" height="20"></p>
+</figure>
+</div>
+<p><sub>fun=“mean”&nbsp;means&nbsp;calculating&nbsp;the&nbsp;average&nbsp;value&nbsp;in&nbsp;overlapping&nbsp;areas.</sub></p>
+<p>This section selects an area near the city of Huzhou, China. The final true-color image after mosaicking has a smooth transition without noticeable seams.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/mosaic.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="509"></p>
+</figure>
+</div>
+<p>Sometimes, when the pixel values in the overlapping areas of two images differ significantly, the seam may become prominent. In such cases, feathering techniques need to be applied.</p>
+</section>
+<section id="image-clipping" class="level4" data-number="3.1.1.3">
+<h4 data-number="3.1.1.3" class="anchored" data-anchor-id="image-clipping"><span class="header-section-number">3.1.1.3</span> Image Clipping</h4>
+<p>Since the coverage of remote sensing images is large, processing and analyzing the entire image may result in unnecessarily computation. Therefore, image clipping is necessary.</p>
+<p>For example, if I want to classify land cover in Anji County, I can use the boundary vector data to clip the image.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="image/anji.png" class="img-fluid figure-img" width="448"></p>
+<figcaption>Landsat 9 True-Color Remote Sensing Image of Anji County</figcaption>
+</figure>
+</div>
+<p>I can also determine a threshold based on NDVI values to extract vegetation.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="image/NDVI1.png" class="quarto-figure quarto-figure-left figure-img" width="363" height="42"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="image/NDVI2.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="data-correction" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="data-correction"><span class="header-section-number">3.1.2</span> Data Correction</h3>
+<section id="radiometric-calibration" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">3.1.2.1</span> Radiometric Calibration</h4>
+<p>Since the sensor receives digital signals, it is necessary to convert them to radiometric units with physical significance, such as radiance. The gain and bias can be obtained from the sensor metadata.</p>
+<p><img src="image/radiometric.png" width="230" height="43"></p>
+</section>
+<section id="geometric-correction" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.1.2.2</span> Geometric Correction</h4>
+<p>Geometric correction mainly consists of two parts:</p>
+<ul>
+<li><p>Establishing a mapping relationship between the image to be corrected and the reference image based on selected control points.</p></li>
+<li><p>Resampling the image.</p></li>
+</ul>
+<p>The choice of resampling method depends on the specific application. For example, nearest neighbor resampling is suitable for classification tasks, while cubic interpolation is more appropriate for image analysis.</p>
+</section>
+<section id="atmospheric-correction" class="level4" data-number="3.1.2.3">
+<h4 data-number="3.1.2.3" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.1.2.3</span> Atmospheric Correction</h4>
+<p>Atmospheric correction is the process of removing atmospheric effects to restore surface reflectance. The necessity of atmospheric correction depends on the specific application. For example:</p>
+<ul>
+<li><p>Land cover classification does not necessarily require atmospheric correction.</p></li>
+<li><p>Quantitative parameter extraction requires it for accurate results.</p></li>
+</ul>
+<table class="caption-top table">
+<caption>Absolute Calibration VS Relative Calibration</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 42%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Absolute Calibration</th>
+<th>Relative Calibration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Objective</td>
+<td>Convert digital brightness values into scaled surface reflectance.</td>
+<td>Normalize radiometric intensities across different images and bands.</td>
+</tr>
+<tr class="even">
+<td>Methods</td>
+<td><ul>
+<li><p>Atmospheric transfer models</p></li>
+<li><p>Empirical Line Calibration</p></li>
+</ul></td>
+<td><ul>
+<li><p>Dark Object Subtraction</p></li>
+<li><p>Histogram Adjustment</p></li>
+<li><p>Pseudoinvariant Features</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td>Typical Applications</td>
+<td>Typical Applications</td>
+<td>Time-series analysis.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="image-enhancement" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="image-enhancement"><span class="header-section-number">3.1.3</span> Image Enhancement</h3>
+<p>Image enhancement refers to the process of improving image quality and highlighting key information using processing techniques. It can be used for smoothing and denoising, edge detection, and contrast enhancement, making images more suitable for observation and analysis.</p>
+</section>
+</section>
+<section id="application" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
+<p>Radiometric calibration, geometric correction and atmospheric correction fall within the scope of remote sensing data preprocessing. The flowchart below intuitively illustrates the position of these three steps in practical remote sensing data applications.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
-<iframe src="https://paradox-breaker.github.io/presentation/pre.html" width="400" height="300" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
+<div>
+<figure class="figure">
+<p><img src="wk3_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
 </div>
-<p><a href="https://paradox-breaker.github.io/presentation/pre.html" class="uri">Link</a></p>
+<p>Currently, many fields that use remote sensing data rely on Level-2 (L2) data because it has already undergone basic radiometric calibration and atmospheric correction, making it ready for direct analysis. For example, in multi-temporal analyses such as land use change and vegetation cover monitoring, standardized Level-2 data eliminates atmospheric interference, enhancing comparability and reducing the need for user preprocessing.</p>
+<p>Of course, not all research requires preprocessed data. For instance, some studies focus on atmospheric analysis or the development and testing of new correction algorithms, in which case more raw data would be more suitable.</p>
+<p>Compared to image correction, the application of image enhancement is relatively more concentrated, primarily focusing on visual enhancement and improving readability. For example, when using ENVI software for land cover classification, if the acquired image has a narrow spectral range that affects manual interpretation, stretching is needed to facilitate land cover recognition and build a reasonable training set. It is important to note that image stretching is mainly used to enhance details and typically does not alter the original pixel values. However, if the enhanced image is to be applied in further analysis, more caution is required, as the enhancement method should improve image contrast and edge information while preserving the original reflectance values <span class="citation" data-cites="Kaplan21">(<a href="references.html#ref-Kaplan21" role="doc-biblioref">Kaplan, Erer, and Kumlu 2021</a>)</span>.</p>
+<p><span class="citation" data-cites="Ramzan2025">Ramzan et al. (<a href="references.html#ref-Ramzan2025" role="doc-biblioref">2025</a>)</span> fused Landsat 8 and Landsat 9 imagery to enhance the accuracy of crop classification and applied image enhancement after fusion to emphasize texture variations and spectral differences. Clearly, this step is crucial for precise classification, as it highlights key features and improves subsequent classification accuracy.</p>
+</section>
+<section id="reflection" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
+<section id="real-time-processing" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="real-time-processing"><span class="header-section-number">3.3.1</span> Real-time Processing</h3>
+<p>Some application areas, such as emergency response in natural disasters, have high real-time requirements. It is crucial to rapidly acquire and analyze image data of affected areas to improve response efficiency. The widespread adoption of UAVs provides a continuous data input source for real-time processing.</p>
+<p>Currently, research has demonstrated the feasibility of implementing edge computing on UAVs to directly perform classification tasks, enabling real-time data monitoring. This approach is also applicable to real-time image correction and enhancement, facilitating the efficient execution of subsequent tasks <span class="citation" data-cites="Daniel2022">(<a href="references.html#ref-Daniel2022" role="doc-biblioref">Hernández et al. 2022</a>)</span>. However, this field still faces challenges related to cost and computational overhead. Therefore, further research is needed to optimize algorithms and improve model accuracy.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -226,6 +370,8 @@ Sishodia, R. P., R. L. Ray, and S. K. Singh. 2020. <span>“Applications of Remo
 Spoto, Francois, Omar Sy, Paolo Laberinti, Philippe Martimort, Valerie Fernandez, Olivier Colin, Bianca Hoersch, and Aime Meygret. 2012. <span>“Overview of Sentinel-2.”</span> In <em>2012 IEEE International Geoscience and Remote Sensing Symposium</em>, 1707–10. <a href="https://doi.org/10.1109/IGARSS.2012.6351195">https://doi.org/10.1109/IGARSS.2012.6351195</a>.
 </div>
 </div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -647,13 +793,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./wk1.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./wk2.html" class="pagination-link" aria-label="Presentation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Presentation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./wk3.html" class="pagination-link" aria-label="Data Correction and Enhancement">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Correction and Enhancement</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

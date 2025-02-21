@@ -86,7 +86,7 @@ Image enhancement refers to the process of improving image quality and highlight
 
 Radiometric calibration, geometric correction and atmospheric correction fall within the scope of remote sensing data preprocessing. The flowchart below intuitively illustrates the position of these three steps in practical remote sensing data applications.
 
-```{r echo = FALSE warning=FALSE}
+```{r echo = FALSE,warning=FALSE}
 library(ggplot2)
 
 # 定义节点数据
