@@ -176,6 +176,7 @@ div.csl-indent {
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a>
   <ul class="collapse">
   <li><a href="#real-time-processing" id="toc-real-time-processing" class="nav-link" data-scroll-target="#real-time-processing"><span class="header-section-number">3.3.1</span> Real-time Processing</a></li>
+  <li><a href="#adaptability-and-generality" id="toc-adaptability-and-generality" class="nav-link" data-scroll-target="#adaptability-and-generality"><span class="header-section-number">3.3.2</span> Adaptability and Generality</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -342,6 +343,13 @@ div.csl-indent {
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="real-time-processing"><span class="header-section-number">3.3.1</span> Real-time Processing</h3>
 <p>Some application areas, such as emergency response in natural disasters, have high real-time requirements. It is crucial to rapidly acquire and analyze image data of affected areas to improve response efficiency. The widespread adoption of UAVs provides a continuous data input source for real-time processing.</p>
 <p>Currently, research has demonstrated the feasibility of implementing edge computing on UAVs to directly perform classification tasks, enabling real-time data monitoring. This approach is also applicable to real-time image correction and enhancement, facilitating the efficient execution of subsequent tasks <span class="citation" data-cites="Daniel2022">(<a href="references.html#ref-Daniel2022" role="doc-biblioref">Hernández et al. 2022</a>)</span>. However, this field still faces challenges related to cost and computational overhead. Therefore, further research is needed to optimize algorithms and improve model accuracy.</p>
+</section>
+<section id="adaptability-and-generality" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="adaptability-and-generality"><span class="header-section-number">3.3.2</span> Adaptability and Generality</h3>
+<p>The correction methods for different sensors are not the same. In geometric correction, due to variations in imaging modes among sensors, optical sensors primarily use ground control points (GCPs) and sometimes utilize digital elevation models (DEM) for orthorectification. In contrast, synthetic aperture radar (SAR), due to its side-looking imaging geometry, requires range-Doppler geometric correction.</p>
+<p>For atmospheric correction, Sentinel-2 employs the 6S model, while hyperspectral data requires band-by-band correction because the large number of spectral bands leads to a greater impact of atmospheric absorption.</p>
+<p>To maintain high efficiency in dynamic environments or to standardize the correction process for multiple sensors mounted on the same platform, a generalized framework and adaptive modules are needed. With advancements in machine learning and AI algorithms, improvements in adaptability have become possible. However, practical limitations remain, such as the conflict between adaptability and generality—excessive pursuit of generality may lead to insufficient optimization for individual sensors, while emphasizing adaptability too much can increase computational burden.</p>
+<p>One emerging approach to address this challenge is developing a universal core algorithm while allowing customization through plugins or configuration files, enabling tailored correction methods for different sensors.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

@@ -130,3 +130,13 @@ Compared to image correction, the application of image enhancement is relatively
 Some application areas, such as emergency response in natural disasters, have high real-time requirements. It is crucial to rapidly acquire and analyze image data of affected areas to improve response efficiency. The widespread adoption of UAVs provides a continuous data input source for real-time processing.
 
 Currently, research has demonstrated the feasibility of implementing edge computing on UAVs to directly perform classification tasks, enabling real-time data monitoring. This approach is also applicable to real-time image correction and enhancement, facilitating the efficient execution of subsequent tasks [@Daniel2022]. However, this field still faces challenges related to cost and computational overhead. Therefore, further research is needed to optimize algorithms and improve model accuracy.
+
+### Adaptability and Generality
+
+The correction methods for different sensors are not the same. In geometric correction, due to variations in imaging modes among sensors, optical sensors primarily use ground control points (GCPs) and sometimes utilize digital elevation models (DEM) for orthorectification. In contrast, synthetic aperture radar (SAR), due to its side-looking imaging geometry, requires range-Doppler geometric correction.
+
+For atmospheric correction, Sentinel-2 employs the 6S model, while hyperspectral data requires band-by-band correction because the large number of spectral bands leads to a greater impact of atmospheric absorption.
+
+To maintain high efficiency in dynamic environments or to standardize the correction process for multiple sensors mounted on the same platform, a generalized framework and adaptive modules are needed. With advancements in machine learning and AI algorithms, improvements in adaptability have become possible. However, practical limitations remain, such as the conflict between adaptability and generality—excessive pursuit of generality may lead to insufficient optimization for individual sensors, while emphasizing adaptability too much can increase computational burden.
+
+One emerging approach to address this challenge is developing a universal core algorithm while allowing customization through plugins or configuration files, enabling tailored correction methods for different sensors.
