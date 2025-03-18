@@ -106,10 +106,10 @@ Finally, extra dimensions in PrincipalComponents are removed, bands are renamed,
 
 Ultimately, the first four principal components explain more than 99.5% of the variance.
 
-![](image/wk6/pca.png){width="387"}
+![](image/wk6/pca.png){width="420"}
 
 ### NDVI
 
-![](image/wk6/ndvi_code.png)
+![](image/wk6/ndvi_code.png){width="404"}
 
-![](image/wk6/ndvi_result.png)
+![](image/wk6/ndvi_result.png){width="369"}
