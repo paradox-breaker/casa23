@@ -175,6 +175,13 @@ div.csl-indent {
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">4.1</span> Summary</a>
   <ul class="collapse">
   <li><a href="#loading-data" id="toc-loading-data" class="nav-link" data-scroll-target="#loading-data"><span class="header-section-number">4.1.1</span> Loading Data</a></li>
+  <li><a href="#radiometric-calibration" id="toc-radiometric-calibration" class="nav-link" data-scroll-target="#radiometric-calibration"><span class="header-section-number">4.1.2</span> Radiometric Calibration</a></li>
+  <li><a href="#visualizing-images" id="toc-visualizing-images" class="nav-link" data-scroll-target="#visualizing-images"><span class="header-section-number">4.1.3</span> Visualizing Images</a></li>
+  <li><a href="#mosaic-images" id="toc-mosaic-images" class="nav-link" data-scroll-target="#mosaic-images"><span class="header-section-number">4.1.4</span> Mosaic images</a></li>
+  <li><a href="#clip-images" id="toc-clip-images" class="nav-link" data-scroll-target="#clip-images"><span class="header-section-number">4.1.5</span> Clip images</a></li>
+  <li><a href="#texture-measures" id="toc-texture-measures" class="nav-link" data-scroll-target="#texture-measures"><span class="header-section-number">4.1.6</span> Texture measures</a></li>
+  <li><a href="#pca" id="toc-pca" class="nav-link" data-scroll-target="#pca"><span class="header-section-number">4.1.7</span> PCA</a></li>
+  <li><a href="#ndvi" id="toc-ndvi" class="nav-link" data-scroll-target="#ndvi"><span class="header-section-number">4.1.8</span> NDVI</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -207,9 +214,73 @@ div.csl-indent {
 <section id="loading-data" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="loading-data"><span class="header-section-number">4.1.1</span> Loading Data</h3>
 <p>In this case, we select Landsat 8 Collection 2, T1, L2 data and filter it by time and region, using lt (less than) to select images with cloud cover below 10%.</p>
-<p><img src="image/wk6/load_code.jpg" class="img-fluid"></p>
+<p><img src="image/wk6/load_code.jpg" width="329" height="50"></p>
 <p>After printing, the console shows the image count and their path-row numbers.</p>
-<p><img src="image/wk6/load_console.jpg" class="img-fluid"></p>
+<p><img src="image/wk6/load_console.jpg" class="img-fluid" width="297"></p>
+</section>
+<section id="radiometric-calibration" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">4.1.2</span> Radiometric Calibration</h3>
+<p>Use regular expressions to filter images.</p>
+<p>Different scaling factors are applied to reflectance and brightness temperature.</p>
+<p>“True” indicates that the original image bands will be replaced.</p>
+<p><img src="image/wk6/calibration.jpg" class="img-fluid" width="363"></p>
+</section>
+<section id="visualizing-images" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="visualizing-images"><span class="header-section-number">4.1.3</span> Visualizing Images</h3>
+<p>Here, the median of multiple images is computed.</p>
+<p>min and max control image stretching:</p>
+<p>Pixels with values ≤ min (≥ max) are mapped to the darkest (brightest) color.</p>
+<p>Values in between are linearly stretched.</p>
+<p><img src="image/wk6/visualization code.jpg" class="img-fluid" width="359"></p>
+<p><img src="image/wk6/visualization1.jpg" class="img-fluid" width="379"></p>
+<p>The image is modified to standard false color in the layer settings.</p>
+<p><img src="image/wk6/visualization2.jpg" class="img-fluid" width="377"></p>
+</section>
+<section id="mosaic-images" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="mosaic-images"><span class="header-section-number">4.1.4</span> Mosaic images</h3>
+<p>The mosaic effect here is not ideal, as there is a noticeable stacking effect.</p>
+<p><img src="image/wk6/mosaic.jpg" class="img-fluid" width="369"></p>
+</section>
+<section id="clip-images" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="clip-images"><span class="header-section-number">4.1.5</span> Clip images</h3>
+<p><img src="image/wk6/clip.png" class="img-fluid" width="286"></p>
+</section>
+<section id="texture-measures" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" class="anchored" data-anchor-id="texture-measures"><span class="header-section-number">4.1.6</span> Texture measures</h3>
+<p>Since the reflectance values are small, but .glcmTexture() requires integer values, the data needs to be stretched.</p>
+<p><img src="image/wk6/texture.png" class="img-fluid" width="244"></p>
+<p>Here, the values are multiplied by 1000.</p>
+<p>{size: 1} specifies a 3×3 window is used.</p>
+<p>Selected texture metrics: contrast and dissimilarity.</p>
+<p>.toUint16() converts the data to 16-bit integers, as GLCM calculations cannot process 32-bit floating-point numbers.</p>
+<p><img src="image/wk6/texture_code.png" class="img-fluid" width="363"></p>
+<p><img src="image/wk6/texture_result.png" class="img-fluid"></p>
+</section>
+<section id="pca" class="level3" data-number="4.1.7">
+<h3 data-number="4.1.7" class="anchored" data-anchor-id="pca"><span class="header-section-number">4.1.7</span> PCA</h3>
+<p>Perform some preliminary setup.</p>
+<p>meanDict.values(bandNames) extracts the mean of each band as a constant image (without spatial variation) for mean centering.</p>
+<p><img src="image/wk6/pca_code1.png" class="img-fluid" width="360"></p>
+<p>Then, start defining the function.</p>
+<p>Convert the image so that each pixel contains an array storing multi-band values. The default image storage format is not suitable for direct matrix computations.</p>
+<p><img src="image/wk6/pca_code2.png" class="img-fluid" width="373"></p>
+<p>covar is an ee.Dictionary containing the covariance matrix and get(‘array’) retrieves it.</p>
+<p>covarArray.eigen() computes the eigenvalues and eigenvectors.</p>
+<p>The result is then sliced using eigens.slice(1, 0, 1) (Dimension = 1 (slicing by rows);Start from row 0, excluding subsequent rows)</p>
+<p>Converted into a 1D list, from which the total variance is calculated.</p>
+<p>Finally, the variance contribution rate of each component is computed.</p>
+<p><img src="image/wk6/pca_code3.png" class="img-fluid" width="375"></p>
+<p>toArray(1) converts the 1D array into a 2D array (row-wise), making it suitable for matrixMultiply() computations.</p>
+<p>.arrayFlatten([…]) converts the array image into a regular image format, with a list defining the new band names.</p>
+<p>Finally, extra dimensions in PrincipalComponents are removed, bands are renamed, and normalization is applied.</p>
+<p><img src="image/wk6/pca_code4.png" class="img-fluid" width="379"></p>
+<p>Ultimately, the first four principal components explain more than 99.5% of the variance.</p>
+<p><img src="image/wk6/pca.png" class="img-fluid" width="387"></p>
+</section>
+<section id="ndvi" class="level3" data-number="4.1.8">
+<h3 data-number="4.1.8" class="anchored" data-anchor-id="ndvi"><span class="header-section-number">4.1.8</span> NDVI</h3>
+<p><img src="image/wk6/ndvi_code.png" class="img-fluid"></p>
+<p><img src="image/wk6/ndvi_result.png" class="img-fluid"></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

@@ -8,8 +8,108 @@ The week mainly focuses on Practical examples to analyze functions and operation
 
 In this case, we select Landsat 8 Collection 2, T1, L2 data and filter it by time and region, using lt (less than) to select images with cloud cover below 10%.
 
-![](image/wk6/load_code.jpg)
+![](image/wk6/load_code.jpg){width="329" height="50"}
 
 After printing, the console shows the image count and their path-row numbers.
 
-![](image/wk6/load_console.jpg)
+![](image/wk6/load_console.jpg){width="297"}
+
+### Radiometric Calibration
+
+Use regular expressions to filter images.
+
+Different scaling factors are applied to reflectance and brightness temperature.
+
+“True” indicates that the original image bands will be replaced.
+
+![](image/wk6/calibration.jpg){width="363"}
+
+### Visualizing Images
+
+Here, the median of multiple images is computed.
+
+min and max control image stretching:
+
+Pixels with values ≤ min (≥ max) are mapped to the darkest (brightest) color.
+
+Values in between are linearly stretched.
+
+![](image/wk6/visualization code.jpg){width="359"}
+
+![](image/wk6/visualization1.jpg){width="379"}
+
+The image is modified to standard false color in the layer settings.
+
+![](image/wk6/visualization2.jpg){width="377"}
+
+### Mosaic images
+
+The mosaic effect here is not ideal, as there is a noticeable stacking effect.
+
+![](image/wk6/mosaic.jpg){width="369"}
+
+### Clip images
+
+![](image/wk6/clip.png){width="286"}
+
+### Texture measures
+
+Since the reflectance values are small, but .glcmTexture() requires integer values, the data needs to be stretched.
+
+![](image/wk6/texture.png){width="244"}
+
+Here, the values are multiplied by 1000.
+
+{size: 1} specifies a 3×3 window is used.
+
+Selected texture metrics: contrast and dissimilarity.
+
+.toUint16() converts the data to 16-bit integers, as GLCM calculations cannot process 32-bit floating-point numbers.
+
+![](image/wk6/texture_code.png){width="363"}
+
+![](image/wk6/texture_result.png)
+
+### PCA
+
+Perform some preliminary setup.
+
+meanDict.values(bandNames) extracts the mean of each band as a constant image (without spatial variation) for mean centering.
+
+![](image/wk6/pca_code1.png){width="360"}
+
+Then, start defining the function.
+
+Convert the image so that each pixel contains an array storing multi-band values. The default image storage format is not suitable for direct matrix computations.
+
+![](image/wk6/pca_code2.png){width="373"}
+
+covar is an ee.Dictionary containing the covariance matrix and get('array') retrieves it.
+
+covarArray.eigen() computes the eigenvalues and eigenvectors.
+
+The result is then sliced using eigens.slice(1, 0, 1) (Dimension = 1 (slicing by rows);Start from row 0, excluding subsequent rows)
+
+Converted into a 1D list, from which the total variance is calculated.
+
+Finally, the variance contribution rate of each component is computed.
+
+![](image/wk6/pca_code3.png){width="375"}
+
+toArray(1) converts the 1D array into a 2D array (row-wise), making it suitable for matrixMultiply() computations.
+
+.arrayFlatten(\[...\]) converts the array image into a regular image format, with a list defining the new band names.
+
+Finally, extra dimensions in PrincipalComponents are removed, bands are renamed, and normalization is applied.
+
+![](image/wk6/pca_code4.png){width="379"}
+
+Ultimately, the first four principal components explain more than 99.5% of the variance.
+
+![](image/wk6/pca.png){width="387"}
+
+### NDVI
+
+![](image/wk6/ndvi_code.png)
+
+![](image/wk6/ndvi_result.png)
