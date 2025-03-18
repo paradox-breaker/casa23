@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction – CASA0023 Weekly Diary</title>
+<title>4&nbsp; Google Earth Engine – CASA0023 Weekly Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./wk2.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./wk3.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk6.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,7 +134,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./wk1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -152,7 +152,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk6.html" class="sidebar-item-text sidebar-link">
+  <a href="./wk6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
@@ -172,18 +172,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">4.1</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#active-and-passive-remote-sensing" id="toc-active-and-passive-remote-sensing" class="nav-link" data-scroll-target="#active-and-passive-remote-sensing"><span class="header-section-number">1.1.1</span> Active and Passive Remote Sensing</a></li>
-  <li><a href="#interaction-with-earths-surface" id="toc-interaction-with-earths-surface" class="nav-link" data-scroll-target="#interaction-with-earths-surface"><span class="header-section-number">1.1.2</span> Interaction with Earth’s Surface</a></li>
-  <li><a href="#four-types-of-resolution" id="toc-four-types-of-resolution" class="nav-link" data-scroll-target="#four-types-of-resolution"><span class="header-section-number">1.1.3</span> Four Types of Resolution</a></li>
-  </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">1.2</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a>
-  <ul class="collapse">
-  <li><a href="#understanding-remote-sensing-sensors" id="toc-understanding-remote-sensing-sensors" class="nav-link" data-scroll-target="#understanding-remote-sensing-sensors"><span class="header-section-number">1.3.1</span> Understanding Remote Sensing Sensors</a></li>
-  <li><a href="#methods-for-balancing-the-four-resolutions" id="toc-methods-for-balancing-the-four-resolutions" class="nav-link" data-scroll-target="#methods-for-balancing-the-four-resolutions"><span class="header-section-number">1.3.2</span> Methods for Balancing the Four Resolutions</a></li>
-  <li><a href="#future-prospects-of-remote-sensing-technology" id="toc-future-prospects-of-remote-sensing-technology" class="nav-link" data-scroll-target="#future-prospects-of-remote-sensing-technology"><span class="header-section-number">1.3.3</span> Future Prospects of Remote Sensing Technology</a></li>
+  <li><a href="#loading-data" id="toc-loading-data" class="nav-link" data-scroll-target="#loading-data"><span class="header-section-number">4.1.1</span> Loading Data</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -193,7 +184,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></h1>
 </div>
 
 
@@ -210,139 +201,15 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
-<p>Remote sensing is a science that uses electromagnetic radiation as a medium to identify surface features and apply surface information to relevant fields <span class="citation" data-cites="Ranganath2007">(<a href="references.html#ref-Ranganath2007" role="doc-biblioref">Navalgund, Jayaraman, and Roy 2007</a>)</span>. Various sensors function like human eyes that can perceive a broader range of spectral bands, providing richer and more extensive ground information, thus laying the foundation for further analysis.</p>
-<section id="active-and-passive-remote-sensing" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="active-and-passive-remote-sensing"><span class="header-section-number">1.1.1</span> Active and Passive Remote Sensing</h3>
-<p><a href="#fig-comparison" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> and <a href="#tbl-comparison" class="quarto-xref">Table&nbsp;<span>1.1</span></a> demonstate the differences between active and passive remote sensing in terms of working principles, advantages and applications.</p>
-<div id="fig-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://analytik.co.uk/wp-content/uploads/2019/01/active-vs-passive-remote-sensing.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: Principle Differences Between Active and Passive Remote Sensing
-</figcaption>
-</figure>
-</div>
-<div id="tbl-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1.1: Comparison of Active and Passive Remote Sensing
-</figcaption>
-<div aria-describedby="tbl-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 48%">
-<col style="width: 40%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Category</th>
-<th>Active Remote Sensing</th>
-<th>Passive Remote Sensing</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Energy Source</td>
-<td>Sensor-generated energy</td>
-<td>Relies on surface radiation</td>
-</tr>
-<tr class="even">
-<td>Advantages</td>
-<td><ul>
-<li><p>Independent of surface radiation, unaffected by lighting conditions.</p></li>
-<li><p>Can penetrate clouds, vegetation, etc.</p></li>
-</ul></td>
-<td><ul>
-<li><p>Can cover large areas simultaneously.</p></li>
-<li><p>High revisit rate,capable of providing time-series data</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Applications</td>
-<td>Suitable for all-time, all-weather, and extreme environment measurements</td>
-<td>Suitable for large-scale continuous observation</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="interaction-with-earths-surface" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="interaction-with-earths-surface"><span class="header-section-number">1.1.2</span> Interaction with Earth’s Surface</h3>
-<p>As <a href="#fig-interaction" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> shows, solar radiation undergoes a series of interactions at the Earth’s surface, such as cloud scattering, surface scattering, and atmospheric absorption. The energy ultimately received by the sensor is the result of these combined processes, representing rich information while also potentially introducing interference to the research. For example, atmospheric correction is required in the preprocessing of remote sensing images because the energy received by the sensor is affected by atmospheric scattering and absorption, leading to reduced image contrast.</p>
-<div id="fig-interaction" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="image/interaction.jpg" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.2: Interaction with Earth’s Surface
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="four-types-of-resolution" class="level3" data-number="1.1.3">
-<h3 data-number="1.1.3" class="anchored" data-anchor-id="four-types-of-resolution"><span class="header-section-number">1.1.3</span> Four Types of Resolution</h3>
-<p>Typically, the design of remote sensing sensors requires a trade-off between these four types of resolution based on their primary application areas. For example, high spatial resolution often comes at the cost of a smaller coverage area, which results in a longer revisit period, meaning lower temporal resolution. Additionally, due to technical constraints such as data transmission, spatial resolution and spectral resolution cannot be simultaneously maximized.</p>
-<table class="caption-top table">
-<caption>Definitions of the Four Types of Resolution in Remote Sensing</caption>
-<colgroup>
-<col style="width: 18%">
-<col style="width: 81%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Resolution Type</th>
-<th>&nbsp;Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Spatial Resolution</td>
-<td>The smallest ground unit distinguishable by the sensor, which corresponds to the size of a raster pixel.</td>
-</tr>
-<tr class="even">
-<td>Spectral Resolution</td>
-<td>The number and width of spectral bands that the sensor can detect.</td>
-</tr>
-<tr class="odd">
-<td>Temporal Resolution</td>
-<td>The revisit cycle of the sensor.</td>
-</tr>
-<tr class="even">
-<td>Radiometric Resolution</td>
-<td>The smallest detectable energy variation by the sensor.</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="application" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
-<p>Remote sensing has been widely studied in various fields, including agricultural management, environmental monitoring, geological exploration, climate change research, land planning, and disaster emergency response. The applicability of active and passive remote sensing varies across different research areas. For example, in terrain mapping, passive remote sensing lacks strong penetration capability, making it difficult to acquire exposed terrain information. In contrast, active remote sensing techniques such as LiDAR and SAR can penetrate surface cover and directly measure elevation. Similarly, in vegetation analysis, the spectral characteristics of vegetation align well with solar radiation, allowing passive remote sensing to provide rich spectral information. This makes it easier to calculate vegetation indices and efficiently monitor vegetation changes.</p>
-<p>In addition, different fields have varying requirements for image resolution. For instance, urban planning requires high spatial resolution to identify fine structures such as roads and buildings. Weather monitoring demands frequent data updates to capture rapidly changing atmospheric conditions. Vegetation analysis relies on abundant spectral information to detect subtle variations in vegetation health. Temperature monitoring requires sensors with high radiometric resolution to capture small temperature differences accurately.</p>
-<p>Taking the application of remote sensing in agriculture as an example, the technology primarily utilized in this field is passive remote sensing, which aims to obtain information about plant growth and health conditions. Remote sensing in agriculture can be categorized into several aspects, including crop identification, growth monitoring, yield estimation, pest and disease control, and irrigation management, all of which help optimize agricultural operations and enhance production efficiency.</p>
-<p>The advancement of remote sensing technology, particularly improvements in satellite image resolution, has significantly contributed to the development of precision agriculture. For instance, high spatial resolution data provides more detailed ground information, aiding in land cover identification and soil condition monitoring. Meanwhile, hyperspectral imagery captures finer spectral details, such as the quantification of solar-induced chlorophyll fluorescence, which helps estimate photosynthetic activity, reflecting crop nutritional status and stress response capabilities <span class="citation" data-cites="sishodia2020">(<a href="references.html#ref-sishodia2020" role="doc-biblioref">Sishodia, Ray, and Singh 2020</a>)</span>.</p>
-</section>
-<section id="reflection" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
-<section id="understanding-remote-sensing-sensors" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="understanding-remote-sensing-sensors"><span class="header-section-number">1.3.1</span> Understanding Remote Sensing Sensors</h3>
-<p>I find it fascinating to compare the information received by the human eye with that received by remote sensing sensors. Despite experiencing the same Rayleigh scattering, observers at different locations may see different sky colors due to variations in the atmospheric path length of sunlight. Similarly, remote sensing satellites are highly susceptible to atmospheric effects, highlighting the importance of atmospheric correction. However, unlike the three types of cone cells in the human eye that perceive color and detail, remote sensing sensors are not limited to three spectral bands. For instance, the combination of the near-infrared and red bands can effectively distinguish vegetation, presenting a standard false-color representation that differs from true-color imagery.</p>
-</section>
-<section id="methods-for-balancing-the-four-resolutions" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="methods-for-balancing-the-four-resolutions"><span class="header-section-number">1.3.2</span> Methods for Balancing the Four Resolutions</h3>
-<p>As mentioned earlier, it is challenging to simultaneously optimize all four types of resolution in a single task. Therefore, in practical applications, multi-source data fusion is often required. For example, to balance spatial and spectral resolution, high-spectral but low-spatial-resolution imagery can be fused with high-spatial-resolution imagery. Additionally, temporal interpolation can be used to integrate high-temporal, low-spatial-resolution data (e.g., MODIS) with low-temporal, high-spatial-resolution data (e.g., Sentinel-2) to generate imagery that balances both temporal and spatial resolution.</p>
-</section>
-<section id="future-prospects-of-remote-sensing-technology" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" class="anchored" data-anchor-id="future-prospects-of-remote-sensing-technology"><span class="header-section-number">1.3.3</span> Future Prospects of Remote Sensing Technology</h3>
-<p>At present, remote sensing technology is evolving toward higher resolution, greater intelligence, and improved efficiency. Enhancing sensor performance while integrating artificial intelligence can significantly improve data processing efficiency and automation. Taking land cover classification as an example, the introduction of machine learning has enhanced classification accuracy and stability. In the future, the development of adaptive classification methods that reduce the need for manual labeling could further enhance the automation and efficiency of remote sensing classification.</p>
+<section id="summary" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
+<p>The week mainly focuses on Practical examples to analyze functions and operations that may be involved in remote sensing data processing using GEE.</p>
+<section id="loading-data" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="loading-data"><span class="header-section-number">4.1.1</span> Loading Data</h3>
+<p>In this case, we select Landsat 8 Collection 2, T1, L2 data and filter it by time and region, using lt (less than) to select images with cloud cover below 10%.</p>
+<p><img src="image/wk6/load_code.jpg" class="img-fluid"></p>
+<p>After printing, the console shows the image count and their path-row numbers.</p>
+<p><img src="image/wk6/load_console.jpg" class="img-fluid"></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -794,13 +661,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      <a href="./wk3.html" class="pagination-link" aria-label="Data Correction and Enhancement">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Correction and Enhancement</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./wk2.html" class="pagination-link" aria-label="Presentation">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Presentation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

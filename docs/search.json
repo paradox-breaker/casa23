@@ -100,6 +100,26 @@
     ]
   },
   {
+    "objectID": "wk6.html",
+    "href": "wk6.html",
+    "title": "4  Google Earth Engine",
+    "section": "",
+    "text": "4.1 Summary\nThe week mainly focuses on Practical examples to analyze functions and operations that may be involved in remote sensing data processing using GEE.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "wk6.html#summary",
+    "href": "wk6.html#summary",
+    "title": "4  Google Earth Engine",
+    "section": "",
+    "text": "4.1.1 Loading Data\nIn this case, we select Landsat 8 Collection 2, T1, L2 data and filter it by time and region, using lt (less than) to select images with cloud cover below 10%.\n\nAfter printing, the console shows the image count and their path-row numbers.\n\n\n\n\n\nAstola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma Kilpi. 2019. “Comparison of Sentinel-2 and Landsat 8 Imagery for Forest Variable Prediction in Boreal Region.” Remote Sensing of Environment 223: 257–73. https://doi.org/https://doi.org/10.1016/j.rse.2019.01.019.\n\n\nHernández, Daniel, José M. Cecilia, Juan-Carlos Cano, and Carlos T. Calafate. 2022. “Flood Detection Using Real-Time Image Segmentation from Unmanned Aerial Vehicles on Edge-Computing Platform.” Remote Sensing 14 (1). https://doi.org/10.3390/rs14010223.\n\n\nKaplan, Nur Huseyin, Isin Erer, and Deniz Kumlu. 2021. “Image Enhancement Methods for Remote Sensing: A Survey.” In Recent Remote Sensing Sensor Applications, edited by Maged Marghany. Rijeka: IntechOpen. https://doi.org/10.5772/intechopen.98527.\n\n\nMohammadpour, Pegah, Domingos Xavier Viegas, and Carlos Viegas. 2022. “Vegetation Mapping with Random Forest Using Sentinel 2 and GLCM Texture Feature—a Case Study for Lousã Region, Portugal.” Remote Sensing 14 (18). https://doi.org/10.3390/rs14184585.\n\n\nNavalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. “Remote Sensing Applications: An Overview.” Current Science 93 (12): 1747–66. http://www.jstor.org/stable/24102069.\n\n\nRamzan, Zeeshan, Nisar Ahmed, Qurat-ul-Ain Akram, Shahzad Asif, and Muhammad Shahbaz. 2025. “Enhancing Crop Classification Through Remote Sensing: Landsat 8-9 Fusion and Feature Selection.” Research Square Preprint (Version 1). https://doi.org/10.21203/rs.3.rs-5710241/v1.\n\n\nSishodia, R. P., R. L. Ray, and S. K. Singh. 2020. “Applications of Remote Sensing in Precision Agriculture: A Review.” Remote Sensing 12: 3136. https://doi.org/10.3390/rs12193136.\n\n\nSpoto, Francois, Omar Sy, Paolo Laberinti, Philippe Martimort, Valerie Fernandez, Olivier Colin, Bianca Hoersch, and Aime Meygret. 2012. “Overview of Sentinel-2.” In 2012 IEEE International Geoscience and Remote Sensing Symposium, 1707–10. https://doi.org/10.1109/IGARSS.2012.6351195.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",

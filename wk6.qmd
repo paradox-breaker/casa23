@@ -1,0 +1,15 @@
+# Google Earth Engine
+
+## Summary
+
+The week mainly focuses on Practical examples to analyze functions and operations that may be involved in remote sensing data processing using GEE.
+
+### Loading Data
+
+In this case, we select Landsat 8 Collection 2, T1, L2 data and filter it by time and region, using lt (less than) to select images with cloud cover below 10%.
+
+![](image/wk6/load_code.jpg)
+
+After printing, the console shows the image count and their path-row numbers.
+
+![](image/wk6/load_console.jpg)
