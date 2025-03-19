@@ -183,6 +183,7 @@ div.csl-indent {
   <li><a href="#pca" id="toc-pca" class="nav-link" data-scroll-target="#pca"><span class="header-section-number">4.1.7</span> PCA</a></li>
   <li><a href="#ndvi" id="toc-ndvi" class="nav-link" data-scroll-target="#ndvi"><span class="header-section-number">4.1.8</span> NDVI</a></li>
   </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">4.2</span> Application</a></li>
   </ul>
 </nav>
     </div>
@@ -281,6 +282,17 @@ div.csl-indent {
 <h3 data-number="4.1.8" class="anchored" data-anchor-id="ndvi"><span class="header-section-number">4.1.8</span> NDVI</h3>
 <p><img src="image/wk6/ndvi_code.png" class="img-fluid" width="404"></p>
 <p><img src="image/wk6/ndvi_result.png" class="img-fluid" width="369"></p>
+</section>
+</section>
+<section id="application" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> Application</h2>
+<p>GEE is a platform for large-scale geospatial data processing and has a wide range of applications across multiple fields, including resource management, environmental monitoring, land use analysis, disaster response, and urban planning. <span class="citation" data-cites="Sidhu01012018">Sidhu, Pebesma, and Câmara (<a href="references.html#ref-Sidhu01012018" role="doc-biblioref">2018</a>)</span> utilized GEE to analyze land use changes in small terrestrial areas of Singapore by generating time series plots of the Enhanced Vegetation Index (EVI). Their study compared the effectiveness of EVI time series products derived from different data sources (MODIS and Landsat), analyzed the causes of EVI value variations, and discussed both the advantages of GEE and the challenges faced when conducting time series analysis on the platform.</p>
+<p>The study results revealed that:</p>
+<ul>
+<li><p>The Tuas industrial area has undergone rapid industrialization since 2006, primarily relying on land reclamation techniques for development. In contrast, the forest cover in the Central Catchment Area has remained unaffected by human activities, with EVI fluctuations aligning with the Southeast Asian monsoon cycle, indicating that vegetation changes are primarily driven by monsoonal variations.</p></li>
+<li><p>MODIS, while having low spatial resolution, offers high temporal resolution, enabling frequent data acquisition. This makes it effective in capturing subtle land cover changes and seasonal trends. On the other hand, Landsat, despite its high spatial resolution, has poor temporal resolution, making it difficult to track complete change dynamics. Additionally, some dates suffer from data loss due to severe cloud cover.</p></li>
+<li><p>Thanks to its MapReduce architecture, GEE demonstrates excellent spatial computing capabilities and can rapidly process imagery on a global scale. However, this very architecture also imposes limitations when simultaneously supporting both spatial and temporal analyses. During the Reduce phase—where data from different time points are integrated—a significant amount of data transmission occurs, increasing computational overhead. As a result, even for small terrestrial areas, processing data beyond a certain time range can lead to computation timeouts.</p></li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -302,6 +314,9 @@ Navalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. <span>“Remote Sens
 <div id="ref-Ramzan2025" class="csl-entry" role="listitem">
 Ramzan, Zeeshan, Nisar Ahmed, Qurat-ul-Ain Akram, Shahzad Asif, and Muhammad Shahbaz. 2025. <span>“Enhancing Crop Classification Through Remote Sensing: Landsat 8-9 Fusion and Feature Selection.”</span> <em>Research Square</em> Preprint (Version 1). <a href="https://doi.org/10.21203/rs.3.rs-5710241/v1">https://doi.org/10.21203/rs.3.rs-5710241/v1</a>.
 </div>
+<div id="ref-Sidhu01012018" class="csl-entry" role="listitem">
+Sidhu, Nanki, Edzer Pebesma, and Gilberto Câmara. 2018. <span>“Using Google Earth Engine to Detect Land Cover Change: Singapore as a Use Case.”</span> <em>European Journal of Remote Sensing</em> 51 (1): 486–500. <a href="https://doi.org/10.1080/22797254.2018.1451782">https://doi.org/10.1080/22797254.2018.1451782</a>.
+</div>
 <div id="ref-sishodia2020" class="csl-entry" role="listitem">
 Sishodia, R. P., R. L. Ray, and S. K. Singh. 2020. <span>“Applications of Remote Sensing in Precision Agriculture: A Review.”</span> <em>Remote Sensing</em> 12: 3136. <a href="https://doi.org/10.3390/rs12193136">https://doi.org/10.3390/rs12193136</a>.
 </div>
@@ -309,7 +324,6 @@ Sishodia, R. P., R. L. Ray, and S. K. Singh. 2020. <span>“Applications of Remo
 Spoto, Francois, Omar Sy, Paolo Laberinti, Philippe Martimort, Valerie Fernandez, Olivier Colin, Bianca Hoersch, and Aime Meygret. 2012. <span>“Overview of Sentinel-2.”</span> In <em>2012 IEEE International Geoscience and Remote Sensing Symposium</em>, 1707–10. <a href="https://doi.org/10.1109/IGARSS.2012.6351195">https://doi.org/10.1109/IGARSS.2012.6351195</a>.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->

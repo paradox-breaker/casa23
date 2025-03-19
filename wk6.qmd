@@ -34,7 +34,7 @@ Pixels with values ≤ min (≥ max) are mapped to the darkest (brightest) color
 
 Values in between are linearly stretched.
 
-![](image/wk6/visualization code.jpg){width="359"}
+![](image/wk6/visualization%20code.jpg){width="359"}
 
 ![](image/wk6/visualization1.jpg){width="379"}
 
@@ -113,3 +113,15 @@ Ultimately, the first four principal components explain more than 99.5% of the v
 ![](image/wk6/ndvi_code.png){width="404"}
 
 ![](image/wk6/ndvi_result.png){width="369"}
+
+## Application
+
+GEE is a platform for large-scale geospatial data processing and has a wide range of applications across multiple fields, including resource management, environmental monitoring, land use analysis, disaster response, and urban planning. @Sidhu01012018 utilized GEE to analyze land use changes in small terrestrial areas of Singapore by generating time series plots of the Enhanced Vegetation Index (EVI). Their study compared the effectiveness of EVI time series products derived from different data sources (MODIS and Landsat), analyzed the causes of EVI value variations, and discussed both the advantages of GEE and the challenges faced when conducting time series analysis on the platform.
+
+The study results revealed that:
+
+-   The Tuas industrial area has undergone rapid industrialization since 2006, primarily relying on land reclamation techniques for development. In contrast, the forest cover in the Central Catchment Area has remained unaffected by human activities, with EVI fluctuations aligning with the Southeast Asian monsoon cycle, indicating that vegetation changes are primarily driven by monsoonal variations.
+
+-   MODIS, while having low spatial resolution, offers high temporal resolution, enabling frequent data acquisition. This makes it effective in capturing subtle land cover changes and seasonal trends. On the other hand, Landsat, despite its high spatial resolution, has poor temporal resolution, making it difficult to track complete change dynamics. Additionally, some dates suffer from data loss due to severe cloud cover.
+
+-    Thanks to its MapReduce architecture, GEE demonstrates excellent spatial computing capabilities and can rapidly process imagery on a global scale. However, this very architecture also imposes limitations when simultaneously supporting both spatial and temporal analyses. During the Reduce phase—where data from different time points are integrated—a significant amount of data transmission occurs, increasing computational overhead. As a result, even for small terrestrial areas, processing data beyond a certain time range can lead to computation timeouts.
