@@ -184,6 +184,7 @@ div.csl-indent {
   <li><a href="#ndvi" id="toc-ndvi" class="nav-link" data-scroll-target="#ndvi"><span class="header-section-number">4.1.8</span> NDVI</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">4.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">4.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -293,6 +294,23 @@ div.csl-indent {
 <li><p>MODIS, while having low spatial resolution, offers high temporal resolution, enabling frequent data acquisition. This makes it effective in capturing subtle land cover changes and seasonal trends. On the other hand, Landsat, despite its high spatial resolution, has poor temporal resolution, making it difficult to track complete change dynamics. Additionally, some dates suffer from data loss due to severe cloud cover.</p></li>
 <li><p>Thanks to its MapReduce architecture, GEE demonstrates excellent spatial computing capabilities and can rapidly process imagery on a global scale. However, this very architecture also imposes limitations when simultaneously supporting both spatial and temporal analyses. During the Reduce phase—where data from different time points are integrated—a significant amount of data transmission occurs, increasing computational overhead. As a result, even for small terrestrial areas, processing data beyond a certain time range can lead to computation timeouts.</p></li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/wk6/runtime.png" class="img-fluid figure-img" width="384"></p>
+<figcaption>Increase in Computation Time Until Timeout</figcaption>
+</figure>
+</div>
+</section>
+<section id="reflection" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
+<p>Through the hands-on practice and literature review, it becomes evident that GEE offers numerous significant advantages, such as:</p>
+<ul>
+<li><p>Built-in access to extensive remote sensing datasets: Users can directly access high-quality remote sensing data, such as Sentinel and Landsat, from the cloud without the need for time-consuming manual downloads and preprocessing. This significantly reduces both time costs and computational storage costs.</p></li>
+<li><p>No need to manually set up a cloud computing environment: Unlike platforms such as GeoTrellis and SciDB, which require users to deploy their own servers or databases, GEE eliminates the need for any computational environment setup. This provides a major advantage for non-specialist users, allowing them to leverage cloud computing without having to learn complex big data processing tools, thus facilitating interdisciplinary research collaboration.</p></li>
+<li><p>Provides APIs for direct large-scale data processing: GEE employs a parallel computing architecture that efficiently processes large-scale data. In spatial computations, GEE enables simultaneous calculations for all pixels rather than processing them individually. Additionally, GEE automatically allocates computing resources to optimize task execution. The API is also designed to be simple and efficient, enabling users to perform complex remote sensing analyses with minimal code effort.</p></li>
+</ul>
+<p>It can be said that GEE is a truly research-friendly and efficient platform, backed by Google’s technical support, ensuring continuous optimization and long-term development potential.</p>
+<p>However, as mentioned earlier, GEE has limitations in time-series analysis. In the future, improvements to the MapReduce computing architecture could further enhance its ability to handle time-series analysis, reducing issues such as computational timeouts and improving overall processing efficiency.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

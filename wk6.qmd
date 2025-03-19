@@ -125,3 +125,19 @@ The study results revealed that:
 -   MODIS, while having low spatial resolution, offers high temporal resolution, enabling frequent data acquisition. This makes it effective in capturing subtle land cover changes and seasonal trends. On the other hand, Landsat, despite its high spatial resolution, has poor temporal resolution, making it difficult to track complete change dynamics. Additionally, some dates suffer from data loss due to severe cloud cover.
 
 -    Thanks to its MapReduce architecture, GEE demonstrates excellent spatial computing capabilities and can rapidly process imagery on a global scale. However, this very architecture also imposes limitations when simultaneously supporting both spatial and temporal analyses. During the Reduce phase—where data from different time points are integrated—a significant amount of data transmission occurs, increasing computational overhead. As a result, even for small terrestrial areas, processing data beyond a certain time range can lead to computation timeouts.
+
+![Increase in Computation Time Until Timeout](image/wk6/runtime.png){width="384"}
+
+## Reflection
+
+Through the hands-on practice and literature review, it becomes evident that GEE offers numerous significant advantages, such as:
+
+-   Built-in access to extensive remote sensing datasets: Users can directly access high-quality remote sensing data, such as Sentinel and Landsat, from the cloud without the need for time-consuming manual downloads and preprocessing. This significantly reduces both time costs and computational storage costs.
+
+-   No need to manually set up a cloud computing environment: Unlike platforms such as GeoTrellis and SciDB, which require users to deploy their own servers or databases, GEE eliminates the need for any computational environment setup. This provides a major advantage for non-specialist users, allowing them to leverage cloud computing without having to learn complex big data processing tools, thus facilitating interdisciplinary research collaboration.
+
+-   Provides APIs for direct large-scale data processing: GEE employs a parallel computing architecture that efficiently processes large-scale data. In spatial computations, GEE enables simultaneous calculations for all pixels rather than processing them individually. Additionally, GEE automatically allocates computing resources to optimize task execution. The API is also designed to be simple and efficient, enabling users to perform complex remote sensing analyses with minimal code effort.
+
+It can be said that GEE is a truly research-friendly and efficient platform, backed by Google's technical support, ensuring continuous optimization and long-term development potential.
+
+However, as mentioned earlier, GEE has limitations in time-series analysis. In the future, improvements to the MapReduce computing architecture could further enhance its ability to handle time-series analysis, reducing issues such as computational timeouts and improving overall processing efficiency.
