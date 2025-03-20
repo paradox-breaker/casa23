@@ -8,7 +8,7 @@ Remote sensing is a science that uses electromagnetic radiation as a medium to i
 
 @fig-comparison and @tbl-comparison demonstate the differences between active and passive remote sensing in terms of working principles, advantages and applications.
 
-[![Principle Differences Between Active and Passive Remote Sensing](https://analytik.co.uk/wp-content/uploads/2019/01/active-vs-passive-remote-sensing.png){#fig-comparison}](https://www.malvernpanalytical.com/en/learn/knowledge-center/insights/what-is-remote-sensing)
+![Principle Differences Between Active and Passive Remote Sensing Source:[Link](https://www.malvernpanalytical.com/en/learn/knowledge-center/insights/what-is-remote-sensing)](https://analytik.co.uk/wp-content/uploads/2019/01/active-vs-passive-remote-sensing.png){#fig-comparison}
 
 +---------------+--------------------------------------------------------------------------+-------------------------------------------------------------+
 | Category      | Active Remote Sensing                                                    | Passive Remote Sensing                                      |
@@ -28,7 +28,7 @@ Remote sensing is a science that uses electromagnetic radiation as a medium to i
 
 As @fig-interaction shows, solar radiation undergoes a series of interactions at the Earth's surface, such as cloud scattering, surface scattering, and atmospheric absorption. The energy ultimately received by the sensor is the result of these combined processes, representing rich information while also potentially introducing interference to the research. For example, atmospheric correction is required in the preprocessing of remote sensing images because the energy received by the sensor is affected by atmospheric scattering and absorption, leading to reduced image contrast.
 
-[![Interaction with Earth's Surface](image/interaction.jpg){#fig-interaction}](https://www.researchgate.net/publication/283355006_Remote_sensing_observations_for_monitoring_coastal_zones_Volturno_River_mouth_case_study)
+![Interaction with Earth's Surface Source: [Link](https://www.researchgate.net/publication/283355006_Remote_sensing_observations_for_monitoring_coastal_zones_Volturno_River_mouth_case_study)](image/interaction.jpg){#fig-interaction}
 
 ### Four Types of Resolution
 
