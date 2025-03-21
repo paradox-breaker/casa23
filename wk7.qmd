@@ -53,7 +53,7 @@ digraph flowchart {
 
 RF leverages multiple decision trees simultaneously, randomly selecting a subset of features during both the overall feature selection for the trees and the feature selection for node splitting, to reduce correlation between trees. The final prediction result is based on the majority vote from different trees (for classification) or the average of predictions (for regression).
 
-It should be noted that each tree has its own OOB (Out-of-Bag) samples, which differ from validation data as they are never used for training. OOB samples are mainly used for parameter tuning or model evaluation.
+It should be noted that each tree has its own OOB (Out-of-Bag) samples, which differ from test data as they are never used for training. OOB samples are mainly used for parameter tuning or model evaluation.
 
 @fig-shenzhen shows the LCC of Shenzhen based on Sentinel-2, with features divided into 4 categories (vegetation, water, bare land, urban). Due to the coarse classification, the overall accuracy of the training set is as high as 99.96%, and that of the test set reaches 99.42%.
 
@@ -62,3 +62,11 @@ It should be noted that each tree has its own OOB (Out-of-Bag) samples, which di
 ### SVM
 
 SVM is a linear binary classifier that maps data into a high-dimensional feature space to find the hyperplane that maximizes the margin for classification. Its main parameters include the C value and Gamma value: the C value controls the penalty for misclassification, while the Gamma value determines the influence range of each data point. The key focus of SVM is to find a balance between maximizing the margin and minimizing misclassification errors.
+
+## Application
+
+There are numerous application areas for land cover classification using remote sensing imagery, These include, but are not limited to crop growth monitoring and yield prediction, urban land use planning, resource management, and environmental change monitoring.
+
+In the agricultural domain, remote sensing products with red-edge bands are often preferred, as this spectral region is highly sensitive to changes in chlorophyll content，which directly reflects plant health and development. For example, @valero2019comparison used RapidEye satellite imagery to distinguish the growth stages of cotton in San Pelayo, a traditional cotton-growing region in Colombia. They compared the performance of three classification algorithms—Maximum Likelihood, Random Forest, and Support Vector Machine (SVM)—and found that SVM performed best in terms of classification accuracy and preservation of geometric detail. Such techniques can be applied to monitor crop growth conditions and development stages, providing valuable support for agricultural management.
+
+For environmental change monitoring, which often requires long-term time series data, Landsat imagery is widely used due to its free accessibility and broad temporal coverage. For instance, coastal wetlands are of high research interest due to their ecological functions such as climate regulation, windbreak and sand fixation, and provision of habitats. By using multi-temporal Landsat imagery and referring to internationally recognized land cover classification standards, researchers can classify coastal land cover types and identify the spatial distribution and dynamic changes of various features (e.g., urban expansion, coastal erosion). This helps assess the degree of degradation and provides a scientific basis for the formulation and implementation of ecological restoration policies [@lemenkova2024artificial].
