@@ -6,23 +6,23 @@ Classification methods include supervised classification and unsupervised classi
 
 ### Decision Tree
 
-+---------------------+--------------------------------------------------+-----------------------------------------------------------------------+
-| Type                | Important Metrics                                | Construction Process (CART Algorithm：Binary Splits at Each Node)     |
-+=====================+==================================================+=======================================================================+
-| Classification Tree | Gini Impurity: quantify the mixing of categories | 1.  Compute the Gini impurity for each feature.                       |
-|                     | in a node                                        |                                                                       |
-|                     |                                                  | 2.  Select the feature with the lowest impurity as the root node.     |
-|                     |                                                  |                                                                       |
-|                     |                                                  | 3.   Repeat this process to select features at subsequent nodes.      |
-+---------------------+--------------------------------------------------+-----------------------------------------------------------------------+
-| Regression Tree     | -   SSR (SSR_total = SSR_left + SSR_right)       | 1.  Traverse all features.                                            |
-|                     |                                                  |                                                                       |
-|                     | -   Tree Score (SSR + α×T)                       | 2.  For each feature, try different split points and compute SSR.     |
-|                     |                                                  |                                                                       |
-|                     |                                                  | 3.  Select the feature and split point with the smallest SSR.         |
-|                     |                                                  |                                                                       |
-|                     |                                                  | 4.   Recursively repeat until a stopping condition is met.            |
-+---------------------+--------------------------------------------------+-----------------------------------------------------------------------+
++---------------------+------------------------------------------------------------+-------------------------------------------------------------------+
+| Type                | Important Metrics                                          | Construction Process (CART Algorithm：Binary Splits at Each Node) |
++=====================+============================================================+===================================================================+
+| Classification Tree | Gini Impurity: quantify the mixing of categories in a node | 1.  Compute the Gini impurity for each feature.                   |
+|                     |                                                            |                                                                   |
+|                     |                                                            | 2.  Select the feature with the lowest impurity as the root node. |
+|                     |                                                            |                                                                   |
+|                     |                                                            | 3.  Repeat this process to select features at subsequent nodes.   |
++---------------------+------------------------------------------------------------+-------------------------------------------------------------------+
+| Regression Tree     | -   SSR (SSR_total = SSR_left + SSR_right)                 | 1.  Traverse all features.                                        |
+|                     |                                                            |                                                                   |
+|                     | -   Tree Score (SSR + α×T)                                 | 2.  For each feature, try different split points and compute SSR. |
+|                     |                                                            |                                                                   |
+|                     |                                                            | 3.  Select the feature and split point with the smallest SSR.     |
+|                     |                                                            |                                                                   |
+|                     |                                                            | 4.  Recursively repeat until a stopping condition is met.         |
++---------------------+------------------------------------------------------------+-------------------------------------------------------------------+
 
 : Classification and Regression Trees
 
