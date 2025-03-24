@@ -206,6 +206,7 @@ div.csl-indent {
   <li><a href="#object-based-classification" id="toc-object-based-classification" class="nav-link" data-scroll-target="#object-based-classification"><span class="header-section-number">6.2.1</span> Object-Based Classification</a></li>
   <li><a href="#sub-pixel-analysis-1" id="toc-sub-pixel-analysis-1" class="nav-link" data-scroll-target="#sub-pixel-analysis-1"><span class="header-section-number">6.2.2</span> Sub-pixel Analysis</a></li>
   </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -239,8 +240,8 @@ div.csl-indent {
 <p>Currently, the SLIC algorithm is one of the most commonly used methods for generating superpixels.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-a515aa3528f0ebbebbdc" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-a515aa3528f0ebbebbdc">{"x":{"diagram":"\ndigraph flowchart {\n  graph [layout = dot, rankdir = TB]\n\n  Step0 [label = \"Initialize a set of center points as superpixel centers\", shape = box]\n  Step1 [label = \"Calculate the spatial distance and color (feature) difference between each pixel and the center points\", shape = box]\n  Step2 [label = \"Assign each pixel to the nearest center to form superpixels\", shape = box]\n  Step3 [label = \"Update the center points based on the current superpixels\", shape = box]\n  Step4 [label = \"Repeat the process iteratively to obtain an optimal segmentation result\", shape = box]\n \n  Step0 -> Step1 -> Step2 -> Step3 -> Step4\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-836b8e652ac29c65db83" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-836b8e652ac29c65db83">{"x":{"diagram":"\ndigraph flowchart {\n  graph [layout = dot, rankdir = TB]\n\n  Step0 [label = \"Initialize a set of center points as superpixel centers\", shape = box]\n  Step1 [label = \"Calculate the spatial distance and color (feature) difference between each pixel and the center points\", shape = box]\n  Step2 [label = \"Assign each pixel to the nearest center to form superpixels\", shape = box]\n  Step3 [label = \"Update the center points based on the current superpixels\", shape = box]\n  Step4 [label = \"Repeat the process iteratively to obtain an optimal segmentation result\", shape = box]\n \n  Step0 -> Step1 -> Step2 -> Step3 -> Step4\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>It is important to note that OBIA is less suitable for images with a high proportion of mixed pixels or unclear geometric structure.</p>
@@ -276,8 +277,6 @@ Figure&nbsp;6.2: Classification Based on Sub-pixel Analysis
 <h3 data-number="6.1.3" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">6.1.3</span> Accuracy Assessment</h3>
 <section id="confusion-matrix" class="level4" data-number="6.1.3.1">
 <h4 data-number="6.1.3.1" class="anchored" data-anchor-id="confusion-matrix"><span class="header-section-number">6.1.3.1</span> Confusion Matrix</h4>
-<p>In some cases, Producer’s Accuracy (PA) is more important—better to overkill than overlook</p>
-<p>In other situations, User’s Accuracy (UA) matters more (e.g.&nbsp;spam emails filtering).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="image/confusion_matrix.png" class="img-fluid figure-img"></p>
@@ -329,6 +328,17 @@ Figure&nbsp;6.2: Classification Based on Sub-pixel Analysis
 <h3 data-number="6.2.2" class="anchored" data-anchor-id="sub-pixel-analysis-1"><span class="header-section-number">6.2.2</span> Sub-pixel Analysis</h3>
 <p>Sub-pixel analysis can be used to improve classification accuracy in heterogeneous areas. It can also estimate the proportional coverage of different land cover types within each pixel, enabling the calculation of land cover composition over larger spatial scales to support environmental management and urban planning.</p>
 <p>For example, <span class="citation" data-cites="asner2005desertification">Asner and Heidebrecht (<a href="references.html#ref-asner2005desertification" role="doc-biblioref">2005</a>)</span> used sub-pixel analysis based on hyperspectral data to estimate the surface proportions of photosynthetic vegetation, non-photosynthetic vegetation, and bare soil in northern Chihuahua. This was done to assess the impacts of desertification on plant growth, ecosystem processes, and the carbon cycle. Clearly, a greater number of spectral bands can effectively reduce spectral overlap between different surface components, thereby improving the accuracy of the analysis.</p>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
+<p>At present, research on land cover classification based on remote sensing imagery generally follows a relatively fixed workflow:</p>
+<p>remote sensing imagery → preprocessing → selection of training samples and classifier → model training → accuracy assessment.</p>
+<p>By the end of this week, we have developed a full understanding of this process.</p>
+<p>This week, our focus was mainly on accuracy assessment, and it became clear that different evaluation metrics emphasize different aspects. Certain application fields place greater importance on Producer’s Accuracy (PA)—for instance, in flood monitoring, it is crucial to identify as many true instances as possible, as missed detections can lead to severe consequences. Other applications prioritize User’s Accuracy (UA)—such as mineral resource identification, where it is essential to minimize false positives to avoid excessive human, financial, and material investments in ordinary rock areas.</p>
+<p>Almost all land cover classification studies report Overall Accuracy (OA), but OA does not always reflect the true performance of the classification. For example, when using remote sensing imagery to extract cotton planting areas—dividing land cover into “cotton planting” and “non-cotton planting”—the sample size between these two classes may be highly imbalanced. Even if the model performs poorly in identifying cotton planting areas, it may still achieve a seemingly high OA by correctly classifying a large number of non-cotton areas.</p>
+<p>Therefore, in practical research, it is necessary to identify and address such potential issues. At the data level, oversampling of minority classes can be used to direct more attention to them. At the model level, hierarchical classification methods can be applied. In the accuracy assessment phase, using multiple evaluation metrics can help compensate for the limitations of any single metric. Moreover, by combining the outcomes and characteristics of these metrics, the classification performance can be discussed in greater depth.</p>
+<p>In recent years, several new evaluation indicators have been proposed, such as cost-sensitive weighted metrics and temporal consistency indicators. With the advancement of multi-source data and classification algorithms, it is likely that more diverse evaluation methods will be adopted in the future to meet the needs of different classification tasks.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -375,7 +385,6 @@ Spoto, Francois, Omar Sy, Paolo Laberinti, Philippe Martimort, Valerie Fernandez
 Valero Medina, José Antonio, and Beatriz Elena Alzate Atehortúa. 2019. <span>“Comparison of Maximum Likelihood, Support Vector Machines, and Random Forest Techniques in Satellite Images Classification.”</span> <em>Tecnura</em> 23 (59): 13–26.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->

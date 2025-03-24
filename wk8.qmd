@@ -46,10 +46,6 @@ In applications, most pixels are mixed. If too many endmembers are selected, the
 
 #### Confusion Matrix
 
-In some cases, Producer’s Accuracy (PA) is more important—better to overkill than overlook
-
-In other situations, User’s Accuracy (UA) matters more (e.g. spam emails filtering).
-
 ![Confusion Matrix](image/confusion_matrix.png)
 
 #### Kappa
@@ -93,3 +89,19 @@ However, this does not mean that object-based land cover classification lacks va
 Sub-pixel analysis can be used to improve classification accuracy in heterogeneous areas. It can also estimate the proportional coverage of different land cover types within each pixel, enabling the calculation of land cover composition over larger spatial scales to support environmental management and urban planning.
 
 For example, @asner2005desertification used sub-pixel analysis based on hyperspectral data to estimate the surface proportions of photosynthetic vegetation, non-photosynthetic vegetation, and bare soil in northern Chihuahua. This was done to assess the impacts of desertification on plant growth, ecosystem processes, and the carbon cycle. Clearly, a greater number of spectral bands can effectively reduce spectral overlap between different surface components, thereby improving the accuracy of the analysis.
+
+## Reflection
+
+At present, research on land cover classification based on remote sensing imagery generally follows a relatively fixed workflow:
+
+remote sensing imagery → preprocessing → selection of training samples and classifier → model training → accuracy assessment.
+
+By the end of this week, we have developed a full understanding of this process.
+
+This week, our focus was mainly on accuracy assessment, and it became clear that different evaluation metrics emphasize different aspects. Certain application fields place greater importance on Producer’s Accuracy (PA)—for instance, in flood monitoring, it is crucial to identify as many true instances as possible, as missed detections can lead to severe consequences. Other applications prioritize User’s Accuracy (UA)—such as mineral resource identification, where it is essential to minimize false positives to avoid excessive human, financial, and material investments in ordinary rock areas.
+
+Almost all land cover classification studies report Overall Accuracy (OA), but OA does not always reflect the true performance of the classification. For example, when using remote sensing imagery to extract cotton planting areas—dividing land cover into "cotton planting" and "non-cotton planting"—the sample size between these two classes may be highly imbalanced. Even if the model performs poorly in identifying cotton planting areas, it may still achieve a seemingly high OA by correctly classifying a large number of non-cotton areas.
+
+Therefore, in practical research, it is necessary to identify and address such potential issues. At the data level, oversampling of minority classes can be used to direct more attention to them. At the model level, hierarchical classification methods can be applied. In the accuracy assessment phase, using multiple evaluation metrics can help compensate for the limitations of any single metric. Moreover, by combining the outcomes and characteristics of these metrics, the classification performance can be discussed in greater depth.
+
+In recent years, several new evaluation indicators have been proposed, such as cost-sensitive weighted metrics and temporal consistency indicators. With the advancement of multi-source data and classification algorithms, it is likely that more diverse evaluation methods will be adopted in the future to meet the needs of different classification tasks.
