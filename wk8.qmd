@@ -77,3 +77,19 @@ Before cross-validation, the data is first clustered based on spatial proximity 
 ##### Example (SVM)
 
 ![Nested Cross Validation](image/example_svm.png)
+
+## Application
+
+### Object-Based Classification
+
+In practical applications, object-based land cover classification is more suitable for high-resolution imagery and study areas with significant human activity, such as urban environments and farmland. This is because high-resolution imagery often reveals clearer geometric structures of land features, and human activities tend to create distinct boundaries. In contrast, mixed pixels caused by low spatial resolution and blurred boundaries due to interlaced vegetation growth can make image segmentation and classification more difficult.
+
+There is abundant literature demonstrating the accuracy of object-based land cover classification in urban studies. For example, @kutz2022object used high-resolution remote sensing data to perform land cover classification and change detection in the Baltimore area. The study showed that land cover maps generated using object-based classification for the years 1999 and 2004 achieved high accuracy. Moreover, compared to pixel-based methods, the object-based approach performed better in detecting land cover changes.
+
+However, this does not mean that object-based land cover classification lacks value in natural landscape classification. Certain algorithms can be used to assist in superpixel segmentation. For instance, image texture features extracted using Gabor filters can be employed to improve the accuracy of segmentation methods [@kutz2022object].
+
+### Sub-pixel Analysis
+
+Sub-pixel analysis can be used to improve classification accuracy in heterogeneous areas. It can also estimate the proportional coverage of different land cover types within each pixel, enabling the calculation of land cover composition over larger spatial scales to support environmental management and urban planning.
+
+For example, @asner2005desertification used sub-pixel analysis based on hyperspectral data to estimate the surface proportions of photosynthetic vegetation, non-photosynthetic vegetation, and bare soil in northern Chihuahua. This was done to assess the impacts of desertification on plant growth, ecosystem processes, and the carbon cycle. Clearly, a greater number of spectral bands can effectively reduce spectral overlap between different surface components, thereby improving the accuracy of the analysis.

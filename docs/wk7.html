@@ -274,8 +274,8 @@ div.csl-indent {
 <p>If the final trained model has low bias, it may lead to overfitting (a high-variance model), requiring pruning of the decision tree.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-ada68ed1ccebba3df327" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-ada68ed1ccebba3df327">{"x":{"diagram":"\ndigraph flowchart {\n  graph [layout = dot, rankdir = TB]\n\n  Step0 [label = \"Build a complete CART regression tree, fitting the training data as much as possible, with the Alpha value set to 0\", shape = box]\n  Step1 [label = \"Vary Alpha to obtain different Alpha values and their corresponding trees\", shape = box]\n  Step2 [label = \"Split the data into training and testing sets in a 7:3 ratio\", shape = box]\n  Step3 [label = \"Train with different Alpha values\", shape = box]\n  Step4 [label = \"Use the trained trees to predict on the test set\", shape = box]\n  Step5 [label = \"Repeat the experiment 10 times with different training-test splits\", shape = box]\n  Step6 [label = \"Identify the Alpha value that minimizes SSR/Gini impurity on the test data\", shape = box]\n  Step7 [label = \"Select the complete tree corresponding to this Alpha value\", shape = box]\n\n  Step0 -> Step1 -> Step2 -> Step3 -> Step4 -> Step5 -> Step6 -> Step7\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-26d699fd3395130c004e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-26d699fd3395130c004e">{"x":{"diagram":"\ndigraph flowchart {\n  graph [layout = dot, rankdir = TB]\n\n  Step0 [label = \"Build a complete CART regression tree, fitting the training data as much as possible, with the Alpha value set to 0\", shape = box]\n  Step1 [label = \"Vary Alpha to obtain different Alpha values and their corresponding trees\", shape = box]\n  Step2 [label = \"Split the data into training and testing sets in a 7:3 ratio\", shape = box]\n  Step3 [label = \"Train with different Alpha values\", shape = box]\n  Step4 [label = \"Use the trained trees to predict on the test set\", shape = box]\n  Step5 [label = \"Repeat the experiment 10 times with different training-test splits\", shape = box]\n  Step6 [label = \"Identify the Alpha value that minimizes SSR/Gini impurity on the test data\", shape = box]\n  Step7 [label = \"Select the complete tree corresponding to this Alpha value\", shape = box]\n\n  Step0 -> Step1 -> Step2 -> Step3 -> Step4 -> Step5 -> Step6 -> Step7\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -318,6 +318,9 @@ Figure&nbsp;5.1: LCC of Shenzhen based on Sentinel-2
 <div id="ref-Adugna2022" class="csl-entry" role="listitem">
 Adugna, Tesfaye, Wenbo Xu, and Jinlong Fan. 2022. <span>“Comparison of Random Forest and Support Vector Machine Classifiers for Regional Land Cover Mapping Using Coarse Resolution FY-3C Images.”</span> <em>Remote Sensing</em> 14 (3). <a href="https://doi.org/10.3390/rs14030574">https://doi.org/10.3390/rs14030574</a>.
 </div>
+<div id="ref-asner2005desertification" class="csl-entry" role="listitem">
+Asner, Gregory P, and Kathleen B Heidebrecht. 2005. <span>“Desertification Alters Regional Ecosystem–Climate Interactions.”</span> <em>Global Change Biology</em> 11 (1): 182–94.
+</div>
 <div id="ref-Astola2019" class="csl-entry" role="listitem">
 Astola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma Kilpi. 2019. <span>“Comparison of Sentinel-2 and Landsat 8 Imagery for Forest Variable Prediction in Boreal Region.”</span> <em>Remote Sensing of Environment</em> 223: 257–73. https://doi.org/<a href="https://doi.org/10.1016/j.rse.2019.01.019">https://doi.org/10.1016/j.rse.2019.01.019</a>.
 </div>
@@ -326,6 +329,9 @@ Hernández, Daniel, José M. Cecilia, Juan-Carlos Cano, and Carlos T. Calafate. 
 </div>
 <div id="ref-Kaplan21" class="csl-entry" role="listitem">
 Kaplan, Nur Huseyin, Isin Erer, and Deniz Kumlu. 2021. <span>“Image Enhancement Methods for Remote Sensing: A Survey.”</span> In <em>Recent Remote Sensing Sensor Applications</em>, edited by Maged Marghany. Rijeka: IntechOpen. <a href="https://doi.org/10.5772/intechopen.98527">https://doi.org/10.5772/intechopen.98527</a>.
+</div>
+<div id="ref-kutz2022object" class="csl-entry" role="listitem">
+Kutz, Kain, Zachary Cook, and Marc Linderman. 2022. <span>“Object Based Classification of a Riparian Environment Using Ultra-High Resolution Imagery, Hierarchical Landcover Structures, and Image Texture.”</span> <em>Scientific Reports</em> 12 (1): 11291.
 </div>
 <div id="ref-lemenkova2024artificial" class="csl-entry" role="listitem">
 Lemenkova, Polina. 2024. <span>“Artificial Intelligence for Computational Remote Sensing: Quantifying Patterns of Land Cover Types Around Cheetham Wetlands, Port Phillip Bay, Australia.”</span> <em>Journal of Marine Science and Engineering</em> 12 (8): 10–3390.
