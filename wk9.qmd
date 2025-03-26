@@ -1,0 +1,78 @@
+# SAR
+
+## Summary
+
+SAR observes Earth's surface by receiving backscattered signals. It is called “synthetic aperture” radar because, as it moves, it collects data from different positions over the same ground area. Subtle differences in the phase and intensity of these multiple observations allow for precise reconstruction of image details, thereby improving spatial resolution—essentially simulating a much longer antenna.
+
+Radar signals respond differently to various surface types depending on the polarization mode. For surface roughness analysis, VV polarization is typically used. For detecting volume scattering from structurally loose objects like tree canopies, VH or HV polarization is more appropriate.
+
+### SAR Values
+
++-----------------+------------------------------------------------------+----------------------------------------------------------+
+| Scale           | Definition                                           | Application                                              |
++=================+======================================================+==========================================================+
+| Power scale     | Original radar signal strength                       | -   Suitable for classification, change detection, etc.  |
+|                 |                                                      |                                                          |
+|                 |                                                      | -   Not ideal for visualization                          |
++-----------------+------------------------------------------------------+----------------------------------------------------------+
+| Amplitude scale | Square root of power                                 | Suitable for visualization                               |
++-----------------+------------------------------------------------------+----------------------------------------------------------+
+| dB scale        | ![](image/wk9/formula1.png){width="176" height="24"} | -   Suitable for distinguishing dark areas               |
+|                 |                                                      |                                                          |
+|                 |                                                      | -    Not ideal for quantitative analysis                 |
++-----------------+------------------------------------------------------+----------------------------------------------------------+
+
+### Change Detection
+
+ROC curves can be used to identify which comparison method is most suitable for the current study.
+
++---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
+| Category                        | Formula                                             | Meaning                                                   |
++=================================+=====================================================+===========================================================+
+| (Original) Ratio Images         | ![](image/wk9/formula2.png){width="65" height="48"} | Compares two images from different periods                |
++---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
+| Improved Ratio                  | ![](image/wk9/formula3.png){width="149"}            | -   An improved version of the original ratio image;      |
+|                                 |                                                     |                                                           |
+|                                 |                                                     | -   Avoids division by zero and applies normalization     |
++---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
+| Mean Ratio Images               | ![](image/wk9/formula4.png){width="200"}            | Applies the ratio to neighborhood means of                |
+|                                 |                                                     | pixels to reduce the impact of outliers                   |
++---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
+| Log Ratio Images                | ![](image/wk9/formula5.png){width="106"}            | Converts multiplicative noise into additive               |
+|                                 |                                                     | noise in the log domain                                   |
++---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
+| Improved Ratio Log Ratio Images | ![](image/wk9/formula6.png){width="221"}            | Combines normalization with logarithmic                   |
+|                                 |                                                     | transformation for better visual and statistical balance  |
++---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
+
+### Change Detection from Image Collections
+
+#### Statistical Testing
+
+A t-test can be applied.
+
+@fig-t2020 shows t-test results of SAR data before and after the Beirut port explosion. @fig-t2019 shows a control test with the date shifted to 2019, noticeably fewer regions show significant change (yellow), indicating that much of the change observed in @fig-t2020 is due to the explosion.
+
+![Pixelwise T-Test, 2020](image/wk9/figure1.png){#fig-t2020}
+
+![Pixelwise T-Test, 2019](image/wk9/figure2.png){#fig-t2019 width="439"}
+
+#### Standard Deviation
+
+Changed pixels will typically exhibit higher standard deviation over a certain period. By setting a threshold, it is possible to identify changed pixels.
+
+#### Image Fusion
+
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Level                    | Explanation                                                                                                                                                                  |
++==========================+==============================================================================================================================================================================+
+| Decision level           | Radar and optical data are treated                                                                                                                                           |
+|                          | independently, as if each occupies its own "band".                                                                                                                           |
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Object level             | Radar and optical data are combined as separate                                                                                                                              |
+|                          | features in the object’s feature space                                                                                                                                       |
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Image level              | New pixel values are calculated, methods include weighting, PCA, and band substitution.                                                                                      |
+|                          |                                                                                                                                                                              |
+|                          | The IHS fusion method is a form of band substitution: It converts an optical RGB image to IHS, replaces the intensity component with SAR data, and converts back to RGB.     |
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
