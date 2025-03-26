@@ -76,3 +76,23 @@ Changed pixels will typically exhibit higher standard deviation over a certain p
 |                          |                                                                                                                                                                              |
 |                          | The IHS fusion method is a form of band substitution: It converts an optical RGB image to IHS, replaces the intensity component with SAR data, and converts back to RGB.     |
 +--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Application
+
+Due to its all-weather, all-day imaging capability and a certain degree of penetration, SAR is widely used for monitoring surface changes and has found broad applications across various fields, such as disaster management, infrastructure monitoring, agricultural management, ocean observation, archaeology, and heritage conservation.
+
+### Ocean Observation
+
+In the field of ocean monitoring, SAR can be used to measure water depth. By analyzing the amplitude and phase of the backscattered signals, SAR is capable of monitoring ocean currents and wave patterns, and further deriving wind speed and direction over the sea surface.
+
+In addition, SAR is highly sensitive to the reflective characteristics of oil films on the ocean surface, making it useful for oil spill detection. This contributes to timely response in oil pollution incidents, helps maintain marine ecosystem health, and protects the well-being of coastal populations.
+
+Moreover, SAR can effectively detect ships under various weather conditions, which plays a critical role in combating illegal fishing, smuggling, and other unlawful maritime activities. It enhances the safety of maritime navigation and supports the sustainable management of marine resources [@Asiyabi2023].
+
+### Agricultural Management
+
+In the field of agricultural management, @Rei2019 utilized VH and VV polarized SAR data acquired by ASNARO-2 (X-band) and Sentinel-1 (C-band) to classify crops in Japan's Tokachi Plain, aiming to explore the potential of such data combinations for crop mapping. The study evaluated classification results using ASNARO-2 XSAR, Sentinel-1 C-SAR, and a combination of both data sources.
+
+The results showed that XSAR data performed better in identifying sugar beet and potato fields, while C-SAR was more suitable for detecting large wheat fields. The complementary use of both datasets helped reduce misclassifications.
+
+The study also revealed that different polarization modes have varying penetration capabilities depending on the crop type, suggesting that polarimetric analysis may be useful for future crop identification.

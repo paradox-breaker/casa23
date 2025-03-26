@@ -280,8 +280,8 @@ div.csl-indent {
 <p>If the final trained model has low bias, it may lead to overfitting (a high-variance model), requiring pruning of the decision tree.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-6f7a08a217dd103477a9" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-6f7a08a217dd103477a9">{"x":{"diagram":"\ndigraph flowchart {\n  graph [layout = dot, rankdir = TB]\n\n  Step0 [label = \"Build a complete CART regression tree, fitting the training data as much as possible, with the Alpha value set to 0\", shape = box]\n  Step1 [label = \"Vary Alpha to obtain different Alpha values and their corresponding trees\", shape = box]\n  Step2 [label = \"Split the data into training and testing sets in a 7:3 ratio\", shape = box]\n  Step3 [label = \"Train with different Alpha values\", shape = box]\n  Step4 [label = \"Use the trained trees to predict on the test set\", shape = box]\n  Step5 [label = \"Repeat the experiment 10 times with different training-test splits\", shape = box]\n  Step6 [label = \"Identify the Alpha value that minimizes SSR/Gini impurity on the test data\", shape = box]\n  Step7 [label = \"Select the complete tree corresponding to this Alpha value\", shape = box]\n\n  Step0 -> Step1 -> Step2 -> Step3 -> Step4 -> Step5 -> Step6 -> Step7\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-c019b0183b07094c6559" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c019b0183b07094c6559">{"x":{"diagram":"\ndigraph flowchart {\n  graph [layout = dot, rankdir = TB]\n\n  Step0 [label = \"Build a complete CART regression tree, fitting the training data as much as possible, with the Alpha value set to 0\", shape = box]\n  Step1 [label = \"Vary Alpha to obtain different Alpha values and their corresponding trees\", shape = box]\n  Step2 [label = \"Split the data into training and testing sets in a 7:3 ratio\", shape = box]\n  Step3 [label = \"Train with different Alpha values\", shape = box]\n  Step4 [label = \"Use the trained trees to predict on the test set\", shape = box]\n  Step5 [label = \"Repeat the experiment 10 times with different training-test splits\", shape = box]\n  Step6 [label = \"Identify the Alpha value that minimizes SSR/Gini impurity on the test data\", shape = box]\n  Step7 [label = \"Select the complete tree corresponding to this Alpha value\", shape = box]\n\n  Step0 -> Step1 -> Step2 -> Step3 -> Step4 -> Step5 -> Step6 -> Step7\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -324,6 +324,9 @@ Figure&nbsp;5.1: LCC of Shenzhen based on Sentinel-2
 <div id="ref-Adugna2022" class="csl-entry" role="listitem">
 Adugna, Tesfaye, Wenbo Xu, and Jinlong Fan. 2022. <span>“Comparison of Random Forest and Support Vector Machine Classifiers for Regional Land Cover Mapping Using Coarse Resolution FY-3C Images.”</span> <em>Remote Sensing</em> 14 (3). <a href="https://doi.org/10.3390/rs14030574">https://doi.org/10.3390/rs14030574</a>.
 </div>
+<div id="ref-Asiyabi2023" class="csl-entry" role="listitem">
+Asiyabi, Reza Mohammadi, Arsalan Ghorbanian, Shaahin Nazarpour Tameh, Meisam Amani, Shuanggen Jin, and Ali Mohammadzadeh. 2023. <span>“Synthetic Aperture Radar (SAR) for Ocean: A Review.”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em> 16: 9106–38. <a href="https://doi.org/10.1109/JSTARS.2023.3310363">https://doi.org/10.1109/JSTARS.2023.3310363</a>.
+</div>
 <div id="ref-asner2005desertification" class="csl-entry" role="listitem">
 Asner, Gregory P, and Kathleen B Heidebrecht. 2005. <span>“Desertification Alters Regional Ecosystem–Climate Interactions.”</span> <em>Global Change Biology</em> 11 (1): 182–94.
 </div>
@@ -356,6 +359,9 @@ Sidhu, Nanki, Edzer Pebesma, and Gilberto Câmara. 2018. <span>“Using Google E
 </div>
 <div id="ref-sishodia2020" class="csl-entry" role="listitem">
 Sishodia, R. P., R. L. Ray, and S. K. Singh. 2020. <span>“Applications of Remote Sensing in Precision Agriculture: A Review.”</span> <em>Remote Sensing</em> 12: 3136. <a href="https://doi.org/10.3390/rs12193136">https://doi.org/10.3390/rs12193136</a>.
+</div>
+<div id="ref-Rei2019" class="csl-entry" role="listitem">
+Sonobe, Rei. 2019. <span>“Combining ASNARO-2 XSAR HH and Sentinel-1 c-SAR VH/VV Polarization Data for Improved Crop Mapping.”</span> <em>Remote Sensing</em> 11 (16). <a href="https://doi.org/10.3390/rs11161920">https://doi.org/10.3390/rs11161920</a>.
 </div>
 <div id="ref-Spoto2012" class="csl-entry" role="listitem">
 Spoto, Francois, Omar Sy, Paolo Laberinti, Philippe Martimort, Valerie Fernandez, Olivier Colin, Bianca Hoersch, and Aime Meygret. 2012. <span>“Overview of Sentinel-2.”</span> In <em>2012 IEEE International Geoscience and Remote Sensing Symposium</em>, 1707–10. <a href="https://doi.org/10.1109/IGARSS.2012.6351195">https://doi.org/10.1109/IGARSS.2012.6351195</a>.
