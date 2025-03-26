@@ -53,9 +53,9 @@ A t-test can be applied.
 
 @fig-t2020 shows t-test results of SAR data before and after the Beirut port explosion. @fig-t2019 shows a control test with the date shifted to 2019, noticeably fewer regions show significant change (yellow), indicating that much of the change observed in @fig-t2020 is due to the explosion.
 
-![Pixelwise T-Test, 2020](image/wk9/figure1.png){#fig-t2020}
+![Pixelwise T-Test, 2020](image/wk9/figure1.png){#fig-t2020 fig-align="left" width="602"}
 
-![Pixelwise T-Test, 2019](image/wk9/figure2.png){#fig-t2019 width="439"}
+![Pixelwise T-Test, 2019](image/wk9/figure2.png){#fig-t2019 fig-align="left" width="439"}
 
 #### Standard Deviation
 
