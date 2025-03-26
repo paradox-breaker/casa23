@@ -96,3 +96,21 @@ In the field of agricultural management, @Rei2019 utilized VH and VV polarized S
 The results showed that XSAR data performed better in identifying sugar beet and potato fields, while C-SAR was more suitable for detecting large wheat fields. The complementary use of both datasets helped reduce misclassifications.
 
 The study also revealed that different polarization modes have varying penetration capabilities depending on the crop type, suggesting that polarimetric analysis may be useful for future crop identification.
+
+## Reflection
+
+#### SAR Noise
+
+As an active remote sensing technology, Synthetic Aperture Radar (SAR) also has its limitations. Unlike optical remote sensing, which relies on incoherent imaging—recording only the total energy received per pixel—SAR uses coherent imaging, which records both the amplitude and phase of the backscattered signal. Optical sensors depend on natural sunlight, which is incoherent and randomly phased, whereas SAR systems actively emit and receive microwave signals.
+
+Because of this, SAR imagery often contains distinct interference patterns caused by the coherent summation of signals from many small scatterers within a pixel. This phenomenon is known as speckle noise. Speckle can distort pixel values and texture information and significantly reduce image interpretability and visual clarity. Therefore, speckle reduction is a critical preprocessing step in SAR applications.
+
+Two commonly used techniques for mitigating speckle are multi-looking and filtering, both of which are essentially based on averaging. Multi-looking involves averaging backscatter values from slightly different viewing geometries, while filtering averages pixel values within a spatial neighborhood.
+
+#### SAR Bands
+
+Among the various SAR frequency bands, the C-band is currently the most widely used in research and operational applications. This is partly due to its data accessibility—for example, Sentinel-1 provides large volumes of open-access C-band data with high temporal frequency. Additionally, the C-band offers strong general-purpose performance, balancing penetration capability with spatial resolution.
+
+However, different SAR frequency bands exhibit different penetration depths and scattering characteristics, and each has its own advantages depending on the application. For example, in crop classification, the C-band is currently the most commonly used in agricultural monitoring. Yet, the S-band also shows great potential for such applications due to its better penetration and sensitivity to crop structural features. Its usage, however, is still limited by the relatively small number of available S-band sensors.
+
+Looking ahead, the development of diverse SAR sensors across multiple frequency bands, along with the launch of more SAR-equipped satellites, is expected to further expand the potential applications of SAR technology across a wide range of fields.
