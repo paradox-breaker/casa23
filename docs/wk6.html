@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Google Earth Engine – CASA0023 Weekly Diary</title>
+<title>5&nbsp; Google Earth Engine – CASA0023 Weekly Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -51,7 +51,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./wk7.html" rel="next">
-<link href="./wk3.html" rel="prev">
+<link href="./wk4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk6.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk6.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -152,26 +152,32 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./wk4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./wk6.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Classification Ⅰ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification Ⅰ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -190,19 +196,19 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">4.1</span> Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">5.1</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#loading-data" id="toc-loading-data" class="nav-link" data-scroll-target="#loading-data"><span class="header-section-number">4.1.1</span> Loading Data</a></li>
-  <li><a href="#radiometric-calibration" id="toc-radiometric-calibration" class="nav-link" data-scroll-target="#radiometric-calibration"><span class="header-section-number">4.1.2</span> Radiometric Calibration</a></li>
-  <li><a href="#visualizing-images" id="toc-visualizing-images" class="nav-link" data-scroll-target="#visualizing-images"><span class="header-section-number">4.1.3</span> Visualizing Images</a></li>
-  <li><a href="#mosaic-images" id="toc-mosaic-images" class="nav-link" data-scroll-target="#mosaic-images"><span class="header-section-number">4.1.4</span> Mosaic images</a></li>
-  <li><a href="#clip-images" id="toc-clip-images" class="nav-link" data-scroll-target="#clip-images"><span class="header-section-number">4.1.5</span> Clip images</a></li>
-  <li><a href="#texture-measures" id="toc-texture-measures" class="nav-link" data-scroll-target="#texture-measures"><span class="header-section-number">4.1.6</span> Texture measures</a></li>
-  <li><a href="#pca" id="toc-pca" class="nav-link" data-scroll-target="#pca"><span class="header-section-number">4.1.7</span> PCA</a></li>
-  <li><a href="#ndvi" id="toc-ndvi" class="nav-link" data-scroll-target="#ndvi"><span class="header-section-number">4.1.8</span> NDVI</a></li>
+  <li><a href="#loading-data" id="toc-loading-data" class="nav-link" data-scroll-target="#loading-data"><span class="header-section-number">5.1.1</span> Loading Data</a></li>
+  <li><a href="#radiometric-calibration" id="toc-radiometric-calibration" class="nav-link" data-scroll-target="#radiometric-calibration"><span class="header-section-number">5.1.2</span> Radiometric Calibration</a></li>
+  <li><a href="#visualizing-images" id="toc-visualizing-images" class="nav-link" data-scroll-target="#visualizing-images"><span class="header-section-number">5.1.3</span> Visualizing Images</a></li>
+  <li><a href="#mosaic-images" id="toc-mosaic-images" class="nav-link" data-scroll-target="#mosaic-images"><span class="header-section-number">5.1.4</span> Mosaic images</a></li>
+  <li><a href="#clip-images" id="toc-clip-images" class="nav-link" data-scroll-target="#clip-images"><span class="header-section-number">5.1.5</span> Clip images</a></li>
+  <li><a href="#texture-measures" id="toc-texture-measures" class="nav-link" data-scroll-target="#texture-measures"><span class="header-section-number">5.1.6</span> Texture measures</a></li>
+  <li><a href="#pca" id="toc-pca" class="nav-link" data-scroll-target="#pca"><span class="header-section-number">5.1.7</span> PCA</a></li>
+  <li><a href="#ndvi" id="toc-ndvi" class="nav-link" data-scroll-target="#ndvi"><span class="header-section-number">5.1.8</span> NDVI</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">4.2</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">4.3</span> Reflection</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">5.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -211,7 +217,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></h1>
 </div>
 
 
@@ -228,25 +234,25 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
+<section id="summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
 <p>The week mainly focuses on Practical examples to analyze functions and operations that may be involved in remote sensing data processing using GEE.</p>
-<section id="loading-data" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="loading-data"><span class="header-section-number">4.1.1</span> Loading Data</h3>
+<section id="loading-data" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="loading-data"><span class="header-section-number">5.1.1</span> Loading Data</h3>
 <p>In this case, we select Landsat 8 Collection 2, T1, L2 data and filter it by time and region, using lt (less than) to select images with cloud cover below 10%.</p>
 <p><img src="image/wk6/load_code.jpg" width="329" height="50"></p>
 <p>After printing, the console shows the image count and their path-row numbers.</p>
 <p><img src="image/wk6/load_console.jpg" class="img-fluid" width="297"></p>
 </section>
-<section id="radiometric-calibration" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">4.1.2</span> Radiometric Calibration</h3>
+<section id="radiometric-calibration" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">5.1.2</span> Radiometric Calibration</h3>
 <p>Use regular expressions to filter images.</p>
 <p>Different scaling factors are applied to reflectance and brightness temperature.</p>
 <p>“True” indicates that the original image bands will be replaced.</p>
 <p><img src="image/wk6/calibration.jpg" class="img-fluid" width="363"></p>
 </section>
-<section id="visualizing-images" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="visualizing-images"><span class="header-section-number">4.1.3</span> Visualizing Images</h3>
+<section id="visualizing-images" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="visualizing-images"><span class="header-section-number">5.1.3</span> Visualizing Images</h3>
 <p>Here, the median of multiple images is computed.</p>
 <p>min and max control image stretching:</p>
 <p>Pixels with values ≤ min (≥ max) are mapped to the darkest (brightest) color.</p>
@@ -256,17 +262,17 @@ div.csl-indent {
 <p>The image is modified to standard false color in the layer settings.</p>
 <p><img src="image/wk6/visualization2.jpg" class="img-fluid" width="377"></p>
 </section>
-<section id="mosaic-images" class="level3" data-number="4.1.4">
-<h3 data-number="4.1.4" class="anchored" data-anchor-id="mosaic-images"><span class="header-section-number">4.1.4</span> Mosaic images</h3>
+<section id="mosaic-images" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="mosaic-images"><span class="header-section-number">5.1.4</span> Mosaic images</h3>
 <p>The mosaic effect here is not ideal, as there is a noticeable stacking effect.</p>
 <p><img src="image/wk6/mosaic.jpg" class="img-fluid" width="369"></p>
 </section>
-<section id="clip-images" class="level3" data-number="4.1.5">
-<h3 data-number="4.1.5" class="anchored" data-anchor-id="clip-images"><span class="header-section-number">4.1.5</span> Clip images</h3>
+<section id="clip-images" class="level3" data-number="5.1.5">
+<h3 data-number="5.1.5" class="anchored" data-anchor-id="clip-images"><span class="header-section-number">5.1.5</span> Clip images</h3>
 <p><img src="image/wk6/clip.png" class="img-fluid" width="286"></p>
 </section>
-<section id="texture-measures" class="level3" data-number="4.1.6">
-<h3 data-number="4.1.6" class="anchored" data-anchor-id="texture-measures"><span class="header-section-number">4.1.6</span> Texture measures</h3>
+<section id="texture-measures" class="level3" data-number="5.1.6">
+<h3 data-number="5.1.6" class="anchored" data-anchor-id="texture-measures"><span class="header-section-number">5.1.6</span> Texture measures</h3>
 <p>Since the reflectance values are small, but .glcmTexture() requires integer values, the data needs to be stretched.</p>
 <p><img src="image/wk6/texture.png" class="img-fluid" width="244"></p>
 <p>Here, the values are multiplied by 1000.</p>
@@ -276,8 +282,8 @@ div.csl-indent {
 <p><img src="image/wk6/texture_code.png" class="img-fluid" width="363"></p>
 <p><img src="image/wk6/texture_result.png" class="img-fluid"></p>
 </section>
-<section id="pca" class="level3" data-number="4.1.7">
-<h3 data-number="4.1.7" class="anchored" data-anchor-id="pca"><span class="header-section-number">4.1.7</span> PCA</h3>
+<section id="pca" class="level3" data-number="5.1.7">
+<h3 data-number="5.1.7" class="anchored" data-anchor-id="pca"><span class="header-section-number">5.1.7</span> PCA</h3>
 <p>Perform some preliminary setup.</p>
 <p>meanDict.values(bandNames) extracts the mean of each band as a constant image (without spatial variation) for mean centering.</p>
 <p><img src="image/wk6/pca_code1.png" class="img-fluid" width="360"></p>
@@ -297,14 +303,14 @@ div.csl-indent {
 <p>Ultimately, the first four principal components explain more than 99.5% of the variance.</p>
 <p><img src="image/wk6/pca.png" class="img-fluid" width="420"></p>
 </section>
-<section id="ndvi" class="level3" data-number="4.1.8">
-<h3 data-number="4.1.8" class="anchored" data-anchor-id="ndvi"><span class="header-section-number">4.1.8</span> NDVI</h3>
+<section id="ndvi" class="level3" data-number="5.1.8">
+<h3 data-number="5.1.8" class="anchored" data-anchor-id="ndvi"><span class="header-section-number">5.1.8</span> NDVI</h3>
 <p><img src="image/wk6/ndvi_code.png" class="img-fluid" width="404"></p>
 <p><img src="image/wk6/ndvi_result.png" class="img-fluid" width="369"></p>
 </section>
 </section>
-<section id="application" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> Application</h2>
+<section id="application" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
 <p>GEE is a platform for large-scale geospatial data processing and has a wide range of applications across multiple fields, including resource management, environmental monitoring, land use analysis, disaster response, and urban planning. <span class="citation" data-cites="Sidhu01012018">Sidhu, Pebesma, and Câmara (<a href="references.html#ref-Sidhu01012018" role="doc-biblioref">2018</a>)</span> utilized GEE to analyze land use changes in small terrestrial areas of Singapore by generating time series plots of the Enhanced Vegetation Index (EVI). Their study compared the effectiveness of EVI time series products derived from different data sources (MODIS and Landsat), analyzed the causes of EVI value variations, and discussed both the advantages of GEE and the challenges faced when conducting time series analysis on the platform.</p>
 <p>The study results revealed that:</p>
 <ul>
@@ -319,8 +325,8 @@ div.csl-indent {
 </figure>
 </div>
 </section>
-<section id="reflection" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
+<section id="reflection" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
 <p>Through the hands-on practice and literature review, it becomes evident that GEE offers numerous significant advantages, such as:</p>
 <ul>
 <li><p>Built-in access to extensive remote sensing datasets: Users can directly access high-quality remote sensing data, such as Sentinel and Landsat, from the cloud without the need for time-consuming manual downloads and preprocessing. This significantly reduces both time costs and computational storage costs.</p></li>
@@ -343,6 +349,9 @@ Asner, Gregory P, and Kathleen B Heidebrecht. 2005. <span>“Desertification Alt
 </div>
 <div id="ref-Astola2019" class="csl-entry" role="listitem">
 Astola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma Kilpi. 2019. <span>“Comparison of Sentinel-2 and Landsat 8 Imagery for Forest Variable Prediction in Boreal Region.”</span> <em>Remote Sensing of Environment</em> 223: 257–73. https://doi.org/<a href="https://doi.org/10.1016/j.rse.2019.01.019">https://doi.org/10.1016/j.rse.2019.01.019</a>.
+</div>
+<div id="ref-Bi2020" class="csl-entry" role="listitem">
+Bischoff-Mattson, Zachary, Gillian Maree, Coleen Vogel, Amanda Lynch, David Olivier, and Deon Terblanche. 2020. <span>“Shape of a Water Crisis: Practitioner Perspectives on Urban Water Scarcity and <span>‘Day Zero’</span> in South Africa.”</span> <em>Water Policy</em> 22 (2): 193–210. <a href="https://doi.org/10.2166/wp.2020.233">https://doi.org/10.2166/wp.2020.233</a>.
 </div>
 <div id="ref-Daniel2022" class="csl-entry" role="listitem">
 Hernández, Daniel, José M. Cecilia, Juan-Carlos Cano, and Carlos T. Calafate. 2022. <span>“Flood Detection Using Real-Time Image Segmentation from Unmanned Aerial Vehicles on Edge-Computing Platform.”</span> <em>Remote Sensing</em> 14 (1). <a href="https://doi.org/10.3390/rs14010223">https://doi.org/10.3390/rs14010223</a>.
@@ -803,13 +812,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./wk3.html" class="pagination-link" aria-label="Data Correction and Enhancement">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Correction and Enhancement</span></span>
+      <a href="./wk4.html" class="pagination-link" aria-label="Policy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./wk7.html" class="pagination-link" aria-label="Classification Ⅰ">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Classification Ⅰ</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification Ⅰ</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

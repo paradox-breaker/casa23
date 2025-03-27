@@ -1,0 +1,19 @@
+# Policy
+
+## Summary
+
+### Context
+
+South Africa is a semi-arid country with an average annual rainfall of less than 500 mm. It experiences high evaporation rates, low precipitation, and significant spatial and temporal variability in rainfall distribution. The vast majority of the country’s water supply relies on surface water sources.
+
+Cape Town, located on the southwestern coast of South Africa, depends on six major dams that provide more than 95% of the city’s water supply. Between 2016 and 2017, water stress in Cape Town intensified, making it one of the major cities in the world facing the risk of "Day Zero"—a scenario where the public water supply system would be shut down. Eventually, through a series of measures such as restricting household water usage, increasing water tariffs, and implementing water-saving campaigns, the city’s water crisis was temporarily alleviated [@Bi2020].
+
+![Google Map of Cape Town](image/cape_town.png){fig-align="left" width="452"}
+
+### Policies
+
+In the Universal Sustainable Development Goals, SDG 6 highlights that water demand is steadily rising due to population growth, urbanization, and other factors. However, many countries currently face water scarcity and the degradation of water-related ecosystems. To address these challenges, investment in infrastructure, ecosystem protection, and hygiene education are essential to ensure universal and affordable access to safe drinking water by 2030. [SGD6](https://www.un.org/sustainabledevelopment/water-and-sanitation/)
+
+The Sendai Framework for Disaster Risk Reduction explicitly emphasizes the use of geospatial information technologies to compile and regularly update local disaster risk information, and to disseminate this information to affected communities, the general public, and decision-makers. It also calls for the integration of disaster risk assessment, mapping, and management into planning processes in areas prone to droughts and floods. [Sendai Framework for Disaster Risk Reduction 2015-2030](https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030)
+
+Following the Day Zero crisis, Cape Town introduced the Cape Town Water Strategy, which promotes responsible water use through pricing mechanisms and aims to diversify water sources through projects such as water reuse, desalination, and groundwater extraction. The goal is to build a water-sensitive and resilient city. [Cape Town Water Strategy](https://www.capetown.gov.za/general/cape-town-water-strategy)
