@@ -201,6 +201,7 @@ div.csl-indent {
   <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context"><span class="header-section-number">4.1.1</span> Context</a></li>
   <li><a href="#policies" id="toc-policies" class="nav-link" data-scroll-target="#policies"><span class="header-section-number">4.1.2</span> Policies</a></li>
   </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">4.2</span> Application</a></li>
   </ul>
 </nav>
     </div>
@@ -244,6 +245,63 @@ div.csl-indent {
 <p>In the Universal Sustainable Development Goals, SDG 6 highlights that water demand is steadily rising due to population growth, urbanization, and other factors. However, many countries currently face water scarcity and the degradation of water-related ecosystems. To address these challenges, investment in infrastructure, ecosystem protection, and hygiene education are essential to ensure universal and affordable access to safe drinking water by 2030. <a href="https://www.un.org/sustainabledevelopment/water-and-sanitation/">SGD6</a></p>
 <p>The Sendai Framework for Disaster Risk Reduction explicitly emphasizes the use of geospatial information technologies to compile and regularly update local disaster risk information, and to disseminate this information to affected communities, the general public, and decision-makers. It also calls for the integration of disaster risk assessment, mapping, and management into planning processes in areas prone to droughts and floods. <a href="https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030">Sendai Framework for Disaster Risk Reduction 2015-2030</a></p>
 <p>Following the Day Zero crisis, Cape Town introduced the Cape Town Water Strategy, which promotes responsible water use through pricing mechanisms and aims to diversify water sources through projects such as water reuse, desalination, and groundwater extraction. The goal is to build a water-sensitive and resilient city. <a href="https://www.capetown.gov.za/general/cape-town-water-strategy">Cape Town Water Strategy</a></p>
+</section>
+</section>
+<section id="application" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> Application</h2>
+<p>To address the drought issue in Cape Town, remotely sensed data can be used to regularly assess drought conditions in the region. This enables timely actions to be taken in order to mitigate the impact of drought on domestic and agricultural water use.</p>
+<p>Specifically, Landsat 8 imagery can be used to classify annual land cover in Cape Town. Based on this classification, the surface area of water bodies and vegetation can be calculated, and changes in their extent can be monitored to help determine the severity of drought. Additionally, various indices can be employed to provide a more comprehensive assessment <span class="citation" data-cites="orimoloye2019">(<a href="references.html#ref-orimoloye2019" role="doc-biblioref">Orimoloye et al. 2019</a>)</span>.</p>
+<table class="caption-top table">
+<caption>Indices for Drought Detection</caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 56%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Index</th>
+<th>Formula</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LST</td>
+<td><img src="image/wk4/LST.png" class="img-fluid" width="153"></td>
+<td>An increase in land surface temperature may indicate reduced surface moisture and lower water availability.</td>
+</tr>
+<tr class="even">
+<td>SATVI</td>
+<td><p><img src="image/wk4/SATVI.png" width="267" height="35"></p>
+<p>In the equation, L is a soil adjustment factor commonly used to correct for the background effects of soil reflectance</p>
+<p><img src="image/wk4/L.png" class="img-fluid" width="203"></p>
+<p>a is an empirical coefficient</p></td>
+<td>Used to assess soil and vegetation moisture conditions, helping to identify potential drought areas.</td>
+</tr>
+<tr class="odd">
+<td>NDWI</td>
+<td><img src="image/wk4/NDWI.png" width="136" height="40"></td>
+<td>Effectively detects the location and changes in water bodies, offering early signs of drought.</td>
+</tr>
+<tr class="even">
+<td>NDDI</td>
+<td><img src="image/wk4/NDDI.png" width="151" height="46"></td>
+<td>Integrates NDVI and NDWI; it is specifically designed to measure drought severity and can be used for real-time monitoring of drought occurrence and progression.</td>
+</tr>
+<tr class="odd">
+<td>WDVI</td>
+<td><p><img src="image/wk4/WDVI.png" width="118" height="30"></p>
+<p>Gamma is a correction factor used to reduce errors caused by soil reflectance.</p></td>
+<td>WDVI performs well in areas with high vegetation cover and can evaluate vegetation moisture and health under drought conditions, thereby indicating drought onset and severity.</td>
+</tr>
+<tr class="even">
+<td>NDVI</td>
+<td><img src="image/wk4/NDVI.png" class="img-fluid" width="134"></td>
+<td>NDVI reflects vegetation health and has a strong correlation with moisture availability.</td>
+</tr>
+</tbody>
+</table>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -280,6 +338,9 @@ Mohammadpour, Pegah, Domingos Xavier Viegas, and Carlos Viegas. 2022. <span>“V
 <div id="ref-Ranganath2007" class="csl-entry" role="listitem">
 Navalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. <span>“Remote Sensing Applications: An Overview.”</span> <em>Current Science</em> 93 (12): 1747–66. <a href="http://www.jstor.org/stable/24102069">http://www.jstor.org/stable/24102069</a>.
 </div>
+<div id="ref-orimoloye2019" class="csl-entry" role="listitem">
+Orimoloye, Israel R, Olusola O Ololade, Sonwabo P Mazinyo, Ahmed M Kalumba, Olapeju Y Ekundayo, Emmanuel T Busayo, Akintomide A Akinsanola, and Werner Nel. 2019. <span>“Spatial Assessment of Drought Severity in Cape Town Area, South Africa.”</span> <em>Heliyon</em> 5 (7).
+</div>
 <div id="ref-Ramzan2025" class="csl-entry" role="listitem">
 Ramzan, Zeeshan, Nisar Ahmed, Qurat-ul-Ain Akram, Shahzad Asif, and Muhammad Shahbaz. 2025. <span>“Enhancing Crop Classification Through Remote Sensing: Landsat 8-9 Fusion and Feature Selection.”</span> <em>Research Square</em> Preprint (Version 1). <a href="https://doi.org/10.21203/rs.3.rs-5710241/v1">https://doi.org/10.21203/rs.3.rs-5710241/v1</a>.
 </div>
@@ -299,7 +360,6 @@ Spoto, Francois, Omar Sy, Paolo Laberinti, Philippe Martimort, Valerie Fernandez
 Valero Medina, José Antonio, and Beatriz Elena Alzate Atehortúa. 2019. <span>“Comparison of Maximum Likelihood, Support Vector Machines, and Random Forest Techniques in Satellite Images Classification.”</span> <em>Tecnura</em> 23 (59): 13–26.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
