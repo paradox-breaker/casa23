@@ -201,7 +201,11 @@ div.csl-indent {
   <li><a href="#ocean-observation" id="toc-ocean-observation" class="nav-link" data-scroll-target="#ocean-observation"><span class="header-section-number">7.2.1</span> Ocean Observation</a></li>
   <li><a href="#agricultural-management" id="toc-agricultural-management" class="nav-link" data-scroll-target="#agricultural-management"><span class="header-section-number">7.2.2</span> Agricultural Management</a></li>
   </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a>
+  <ul class="collapse">
+  <li><a href="#sar-noise" id="toc-sar-noise" class="nav-link" data-scroll-target="#sar-noise"><span class="header-section-number">7.3.1</span> SAR Noise</a></li>
+  <li><a href="#sar-bands" id="toc-sar-bands" class="nav-link" data-scroll-target="#sar-bands"><span class="header-section-number">7.3.2</span> SAR Bands</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -237,7 +241,7 @@ div.csl-indent {
 <colgroup>
 <col style="width: 13%">
 <col style="width: 41%">
-<col style="width: 44%">
+<col style="width: 43%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -276,9 +280,9 @@ div.csl-indent {
 <p>ROC curves can be used to identify which comparison method is most suitable for the current study.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 22%">
-<col style="width: 36%">
-<col style="width: 40%">
+<col style="width: 18%">
+<col style="width: 28%">
+<col style="width: 52%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -354,8 +358,8 @@ Figure&nbsp;7.2: Pixelwise T-Test, 2019
 <h4 data-number="7.1.3.3" class="anchored" data-anchor-id="image-fusion"><span class="header-section-number">7.1.3.3</span> Image Fusion</h4>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 13%">
-<col style="width: 86%">
+<col style="width: 9%">
+<col style="width: 90%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -400,15 +404,14 @@ Figure&nbsp;7.2: Pixelwise T-Test, 2019
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
-<section id="sar-noise" class="level4" data-number="7.3.0.1">
-<h4 data-number="7.3.0.1" class="anchored" data-anchor-id="sar-noise"><span class="header-section-number">7.3.0.1</span> SAR Noise</h4>
-<p>As an active remote sensing technology, Synthetic Aperture Radar (SAR) also has its limitations. Unlike optical remote sensing, which relies on incoherent imaging—recording only the total energy received per pixel—SAR uses coherent imaging, which records both the amplitude and phase of the backscattered signal. Optical sensors depend on natural sunlight, which is incoherent and randomly phased, whereas SAR systems actively emit and receive microwave signals.</p>
-<p>Because of this, SAR imagery often contains distinct interference patterns caused by the coherent summation of signals from many small scatterers within a pixel. This phenomenon is known as speckle noise. Speckle can distort pixel values and texture information and significantly reduce image interpretability and visual clarity. Therefore, speckle reduction is a critical preprocessing step in SAR applications.</p>
-<p>Two commonly used techniques for mitigating speckle are multi-looking and filtering, both of which are essentially based on averaging. Multi-looking involves averaging backscatter values from slightly different viewing geometries, while filtering averages pixel values within a spatial neighborhood.</p>
+<section id="sar-noise" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="sar-noise"><span class="header-section-number">7.3.1</span> SAR Noise</h3>
+<p>SAR differs from optical remote sensing in terms of imaging. Optical remote sensing is a form of incoherent imaging that only records the total energy of each pixel, because it relies on the reflection of natural light, which is incoherent and randomly phased.</p>
+<p>In contrast, SAR is coherent imaging and produces more distinct interference patterns caused by the coherent summation of signals from many small scatterers, which is known as speckle noise. This type of noise affects the pixel values and texture information of objects, and is also unfavorable for visualization. Therefore, it needs to be processed in practical applications. Common methods include multi-looking and filtering. Both are essentially based on averaging: multi-looking averages observations from different viewing angles, while filtering averages values within a neighborhood window.</p>
 </section>
-<section id="sar-bands" class="level4" data-number="7.3.0.2">
-<h4 data-number="7.3.0.2" class="anchored" data-anchor-id="sar-bands"><span class="header-section-number">7.3.0.2</span> SAR Bands</h4>
-<p>Among the various SAR frequency bands, the C-band is currently the most widely used in research and operational applications. This is partly due to its data accessibility—for example, Sentinel-1 provides large volumes of open-access C-band data with high temporal frequency. Additionally, the C-band offers strong general-purpose performance, balancing penetration capability with spatial resolution.</p>
+<section id="sar-bands" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="sar-bands"><span class="header-section-number">7.3.2</span> SAR Bands</h3>
+<p>Among the various SAR bands, the C-band is currently the most widely used in research and operational applications. This is partly due to its data accessibility—for example, Sentinel-1 provides large volumes of open-access C-band data with high temporal frequency. Additionally, the C-band offers strong general-purpose performance, balancing penetration capability with spatial resolution.</p>
 <p>However, different SAR frequency bands exhibit different penetration depths and scattering characteristics, and each has its own advantages depending on the application. For example, in crop classification, the C-band is currently the most commonly used in agricultural monitoring. Yet, the S-band also shows great potential for such applications due to its better penetration and sensitivity to crop structural features. Its usage, however, is still limited by the relatively small number of available S-band sensors.</p>
 <p>Looking ahead, the development of diverse SAR sensors across multiple frequency bands, along with the launch of more SAR-equipped satellites, is expected to further expand the potential applications of SAR technology across a wide range of fields.</p>
 

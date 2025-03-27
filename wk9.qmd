@@ -8,42 +8,39 @@ Radar signals respond differently to various surface types depending on the pola
 
 ### SAR Values
 
-+-----------------+------------------------------------------------------+----------------------------------------------------------+
-| Scale           | Definition                                           | Application                                              |
-+=================+======================================================+==========================================================+
-| Power scale     | Original radar signal strength                       | -   Suitable for classification, change detection, etc.  |
-|                 |                                                      |                                                          |
-|                 |                                                      | -   Not ideal for visualization                          |
-+-----------------+------------------------------------------------------+----------------------------------------------------------+
-| Amplitude scale | Square root of power                                 | Suitable for visualization                               |
-+-----------------+------------------------------------------------------+----------------------------------------------------------+
-| dB scale        | ![](image/wk9/formula1.png){width="176" height="24"} | -   Suitable for distinguishing dark areas               |
-|                 |                                                      |                                                          |
-|                 |                                                      | -    Not ideal for quantitative analysis                 |
-+-----------------+------------------------------------------------------+----------------------------------------------------------+
++-----------------+------------------------------------------------------+---------------------------------------------------------+
+| Scale           | Definition                                           | Application                                             |
++=================+======================================================+=========================================================+
+| Power scale     | Original radar signal strength                       | -   Suitable for classification, change detection, etc. |
+|                 |                                                      |                                                         |
+|                 |                                                      | -   Not ideal for visualization                         |
++-----------------+------------------------------------------------------+---------------------------------------------------------+
+| Amplitude scale | Square root of power                                 | Suitable for visualization                              |
++-----------------+------------------------------------------------------+---------------------------------------------------------+
+| dB scale        | ![](image/wk9/formula1.png){width="176" height="24"} | -   Suitable for distinguishing dark areas              |
+|                 |                                                      |                                                         |
+|                 |                                                      | -   Not ideal for quantitative analysis                 |
++-----------------+------------------------------------------------------+---------------------------------------------------------+
 
 ### Change Detection
 
 ROC curves can be used to identify which comparison method is most suitable for the current study.
 
-+---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
-| Category                        | Formula                                             | Meaning                                                   |
-+=================================+=====================================================+===========================================================+
-| (Original) Ratio Images         | ![](image/wk9/formula2.png){width="65" height="48"} | Compares two images from different periods                |
-+---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
-| Improved Ratio                  | ![](image/wk9/formula3.png){width="149"}            | -   An improved version of the original ratio image;      |
-|                                 |                                                     |                                                           |
-|                                 |                                                     | -   Avoids division by zero and applies normalization     |
-+---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
-| Mean Ratio Images               | ![](image/wk9/formula4.png){width="200"}            | Applies the ratio to neighborhood means of                |
-|                                 |                                                     | pixels to reduce the impact of outliers                   |
-+---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
-| Log Ratio Images                | ![](image/wk9/formula5.png){width="106"}            | Converts multiplicative noise into additive               |
-|                                 |                                                     | noise in the log domain                                   |
-+---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
-| Improved Ratio Log Ratio Images | ![](image/wk9/formula6.png){width="221"}            | Combines normalization with logarithmic                   |
-|                                 |                                                     | transformation for better visual and statistical balance  |
-+---------------------------------+-----------------------------------------------------+-----------------------------------------------------------+
++---------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| Category                        | Formula                                             | Meaning                                                                                          |
++=================================+=====================================================+==================================================================================================+
+| (Original) Ratio Images         | ![](image/wk9/formula2.png){width="65" height="48"} | Compares two images from different periods                                                       |
++---------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| Improved Ratio                  | ![](image/wk9/formula3.png){width="149"}            | -   An improved version of the original ratio image;                                             |
+|                                 |                                                     |                                                                                                  |
+|                                 |                                                     | -   Avoids division by zero and applies normalization                                            |
++---------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| Mean Ratio Images               | ![](image/wk9/formula4.png){width="200"}            | Applies the ratio to neighborhood means of pixels to reduce the impact of outliers               |
++---------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| Log Ratio Images                | ![](image/wk9/formula5.png){width="106"}            | Converts multiplicative noise into additive noise in the log domain                              |
++---------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| Improved Ratio Log Ratio Images | ![](image/wk9/formula6.png){width="221"}            | Combines normalization with logarithmic transformation for better visual and statistical balance |
++---------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------------+
 
 ### Change Detection from Image Collections
 
@@ -63,19 +60,17 @@ Changed pixels will typically exhibit higher standard deviation over a certain p
 
 #### Image Fusion
 
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Level                    | Explanation                                                                                                                                                                  |
-+==========================+==============================================================================================================================================================================+
-| Decision level           | Radar and optical data are treated                                                                                                                                           |
-|                          | independently, as if each occupies its own "band".                                                                                                                           |
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Object level             | Radar and optical data are combined as separate                                                                                                                              |
-|                          | features in the object’s feature space                                                                                                                                       |
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Image level              | New pixel values are calculated, methods include weighting, PCA, and band substitution.                                                                                      |
-|                          |                                                                                                                                                                              |
-|                          | The IHS fusion method is a form of band substitution: It converts an optical RGB image to IHS, replaces the intensity component with SAR data, and converts back to RGB.     |
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Level          | Explanation                                                                                                                                                              |
++================+==========================================================================================================================================================================+
+| Decision level | Radar and optical data are treated independently, as if each occupies its own "band".                                                                                    |
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Object level   | Radar and optical data are combined as separate features in the object’s feature space                                                                                   |
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Image level    | New pixel values are calculated, methods include weighting, PCA, and band substitution.                                                                                  |
+|                |                                                                                                                                                                          |
+|                | The IHS fusion method is a form of band substitution: It converts an optical RGB image to IHS, replaces the intensity component with SAR data, and converts back to RGB. |
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Application
 
@@ -99,17 +94,15 @@ The study also revealed that different polarization modes have varying penetrati
 
 ## Reflection
 
-#### SAR Noise
+### SAR Noise
 
-As an active remote sensing technology, Synthetic Aperture Radar (SAR) also has its limitations. Unlike optical remote sensing, which relies on incoherent imaging—recording only the total energy received per pixel—SAR uses coherent imaging, which records both the amplitude and phase of the backscattered signal. Optical sensors depend on natural sunlight, which is incoherent and randomly phased, whereas SAR systems actively emit and receive microwave signals.
+SAR differs from optical remote sensing in terms of imaging. Optical remote sensing is a form of incoherent imaging that only records the total energy of each pixel, because it relies on the reflection of natural light, which is incoherent and randomly phased.
 
-Because of this, SAR imagery often contains distinct interference patterns caused by the coherent summation of signals from many small scatterers within a pixel. This phenomenon is known as speckle noise. Speckle can distort pixel values and texture information and significantly reduce image interpretability and visual clarity. Therefore, speckle reduction is a critical preprocessing step in SAR applications.
+In contrast, SAR is coherent imaging and produces more distinct interference patterns caused by the coherent summation of signals from many small scatterers, which is known as speckle noise. This type of noise affects the pixel values and texture information of objects, and is also unfavorable for visualization. Therefore, it needs to be processed in practical applications. Common methods include multi-looking and filtering. Both are essentially based on averaging: multi-looking averages observations from different viewing angles, while filtering averages values within a neighborhood window.
 
-Two commonly used techniques for mitigating speckle are multi-looking and filtering, both of which are essentially based on averaging. Multi-looking involves averaging backscatter values from slightly different viewing geometries, while filtering averages pixel values within a spatial neighborhood.
+### SAR Bands
 
-#### SAR Bands
-
-Among the various SAR frequency bands, the C-band is currently the most widely used in research and operational applications. This is partly due to its data accessibility—for example, Sentinel-1 provides large volumes of open-access C-band data with high temporal frequency. Additionally, the C-band offers strong general-purpose performance, balancing penetration capability with spatial resolution.
+Among the various SAR bands, the C-band is currently the most widely used in research and operational applications. This is partly due to its data accessibility—for example, Sentinel-1 provides large volumes of open-access C-band data with high temporal frequency. Additionally, the C-band offers strong general-purpose performance, balancing penetration capability with spatial resolution.
 
 However, different SAR frequency bands exhibit different penetration depths and scattering characteristics, and each has its own advantages depending on the application. For example, in crop classification, the C-band is currently the most commonly used in agricultural monitoring. Yet, the S-band also shows great potential for such applications due to its better penetration and sensitivity to crop structural features. Its usage, however, is still limited by the relatively small number of available S-band sensors.
 
